@@ -1,52 +1,42 @@
 import Image from 'next/image';
+import book from '@/assets/book.png';
+import Button from '@/components/button';
 
 export default function Home() {
   return (
     <main className="w-full max-w-5xl mx-auto p-5 pb-20 grid gap-20">
       {/* Book intro */}
-      <section className="grid gap-10 md:grid-cols-2">
+      <section className="grid gap-10 md:grid-cols-2 items-center">
         {/* Book image */}
-        <div className="bg-slate-200 rounded-lg aspect-square"></div>
+        <div>
+          <Image
+            src={book}
+            alt="Mockup of Developer Marketing Book by Trust"
+            priority
+          />
+        </div>
 
         {/* Book details */}
         <div className="grid gap-5 h-max">
-          <h1 className="font-bold text-3xl">Book Name</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-            sapiente amet ratione placeat ea fuga sed maxime est laboriosam
-            architecto dolore, quis deleniti quisquam distinctio qui iusto.
-            Fugit, hic itaque.
-          </p>
-          <h2 className="font-bold text-xl">Reviews</h2>
-          <p>
-            <i>"Perfectly delightful! A good intro into dev marketing"</i> -
-            Annie Humboldt
-          </p>
-          <p>
-            <i>
-              "This book helped me understand how to connect with developers in
-              my community."
-            </i>
-            - Chris Howard
-          </p>
+          <h1 className="font-bold text-3xl md:text-6xl">
+            Developer Marketing
+          </h1>
+          <h3>A comprehensive approach to reaching and engaging developers</h3>
+
+          {/* Order links */}
+          <div className="grid md:flex gap-10">
+            <Button>Order on Amazon</Button>
+            <Button>Download a free chapter</Button>
+          </div>
         </div>
       </section>
 
-      {/* Order details */}
+      {/* About the book */}
       <section>
         <div className="grid gap-10">
-          <h2 className="font-bold text-xl">Order now</h2>
-          <div className="grid md:flex gap-10">
-            <button className="py-3 px-5 border border-black rounded-lg">
-              Amazon
-            </button>
-            <button className="py-3 px-5 border border-black rounded-lg">
-              Barnes &amp; Nobles
-            </button>
-            <button className="py-3 px-5 border border-black rounded-lg">
-              Books-a-million
-            </button>
-          </div>
+          <h2 className="font-bold text-xl">About the book</h2>
+          <p>{/* Text description */}</p>
+          <div>{/* Embedded video description */}</div>
         </div>
       </section>
     </main>
