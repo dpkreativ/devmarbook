@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
         <header className="w-full max-w-5xl mx-auto p-5 flex justify-between">
           <div className="font-bold">{/* Brand */}</div>
 
-          <div className="grid md:flex items-center gap-5">
+          <div className="flex items-center gap-5">
             <nav>
               <div>What's inside</div>
             </nav>
