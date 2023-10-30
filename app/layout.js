@@ -1,5 +1,6 @@
 import { Inter } from 'next/font/google';
 import './globals.css';
+import Button from '@/components/button';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -13,8 +14,15 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         {/* Header */}
-        <header className="w-full max-w-5xl mx-auto p-5">
-          <div className="font-bold">Book</div>
+        <header className="w-full max-w-5xl mx-auto p-5 flex justify-between">
+          <div className="font-bold">{/* Brand */}</div>
+
+          <div className="grid md:flex items-center gap-5">
+            <nav>
+              <div>What's inside</div>
+            </nav>
+            <Button>Order on Amazon</Button>
+          </div>
         </header>
 
         {/* Main content */}
