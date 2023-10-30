@@ -4,8 +4,8 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'Book',
-  description: 'Book launch',
+  title: 'Developer Marketing',
+  description: 'A comprehensive approach to reaching and engaging developers',
 };
 
 export default function RootLayout({ children }) {
@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         {/* Header */}
         <header className="w-full max-w-5xl mx-auto p-5">
-          <div className='font-bold'>Book</div>
+          <div className="font-bold">Book</div>
         </header>
 
         {/* Main content */}
