@@ -1,6 +1,6 @@
-export default function Button({ children }) {
+export default function Button({ children, type = 'button' }) {
   return (
-    <button className="py-3 px-5 border border-black rounded-lg">
+    <button type={type} className="py-3 px-5 border border-black rounded-lg">
       {children}
     </button>
   );
