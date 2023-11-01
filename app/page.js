@@ -2,10 +2,11 @@ import Image from 'next/image';
 import book from '@/assets/book.png';
 import author from '@/assets/trust.png';
 import Button from '@/components/button';
+import Input from '@/components/input';
 
 export default function Home() {
   return (
-    <main className="w-full max-w-5xl mx-auto p-5 pb-20 grid gap-20">
+    <main className="w-full max-w-4xl mx-auto p-5 pb-20 grid gap-40">
       {/* Book intro */}
       <section className="grid gap-10 md:grid-cols-2 items-center">
         {/* Book image */}
@@ -25,7 +26,7 @@ export default function Home() {
           <h3>A comprehensive approach to reaching and engaging developers</h3>
 
           {/* Order links */}
-          <div className="grid md:flex gap-5 md:gap-10">
+          <div className="grid gap-5">
             <Button>Order on Amazon</Button>
             <Button>Download a free chapter</Button>
           </div>
@@ -41,7 +42,7 @@ export default function Home() {
           voluptates minima deleniti voluptatum molestias natus soluta vero
           earum laboriosam, dicta in?
         </p>
-        <div className="aspect-video bg-slate-200 rounded-lg">
+        <div className="aspect-video bg-slate-200 rounded-lg max-w-2xl mx-auto">
           {/* Embedded video description */}
         </div>
       </section>
@@ -50,7 +51,7 @@ export default function Home() {
       <section className="grid gap-10 md:grid-cols-2 items-center">
         {/* Intro and author bio text */}
         <div className="grid gap-5 h-max">
-          <h2 className="text-5xl">About the author</h2>
+          <h2 className="text-3xl md:text-5xl">About the author</h2>
           <p>
             Trust Onyekwere is a seasoned Developer Relations Manager with over
             five years of experience building developer communities, driving
@@ -59,18 +60,16 @@ export default function Home() {
         </div>
 
         {/* Author image */}
-        <div className="relative aspect-square">
-          <div className="h-full w-full bg-slate-400 rounded-full overflow-clip">
-            <Image src={author} alt="Trust Onyekwere" />
-          </div>
-          {/* <div className="h-full w-full bg-slate-400 rounded-full"></div> */}
+
+        <div className="aspect-square shadow-lg bg-slate-400 rounded-full overflow-clip">
+          <Image src={author} alt="Trust Onyekwere" />
         </div>
       </section>
 
       {/* Download free chapter and signup for newsletter */}
-      <section>
+      <section className="grid md:grid-cols-2 gap-10">
         {/* CTA text */}
-        <div>
+        <div className="grid gap-5 h-max">
           <h2 className="text-3xl md:text-5xl">Download a free chapter</h2>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis
@@ -84,24 +83,18 @@ export default function Home() {
         <div>
           <form className="grid gap-5">
             {/* First name input */}
-            <div className="border border-black rounded-lg p-3">
-              <input type="text" name="firstName" id="firstName" />
-            </div>
+            <Input name="firstName" placeholder="Your first name" />
 
             {/* Last name input */}
-            <div className="border border-black rounded-lg p-3">
-              <input type="text" name="lastName" id="lastName" />
-            </div>
+            <Input name="lastName" placeholder="Your last name" />
 
             {/* Email address input */}
-            <div className="border border-black rounded-lg p-3">
-              <input type="text" name="email" id="email" />
-            </div>
+            <Input name="email" type="email" placeholder="Your email" />
 
             {/* Allow newsletter sign up */}
             <div className="flex gap-3">
               <input type="checkbox" name="newsletter" id="newsletter" />
-              <span>Get updates on latest news</span>
+              <div>Get updates on latest news</div>
             </div>
 
             <Button type="submit">Get free chapter</Button>

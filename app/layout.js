@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         {/* Header */}
-        <header className="w-full max-w-5xl mx-auto p-5 flex justify-between">
+        <header className="w-full max-w-4xl mx-auto p-5 flex justify-between">
           <div className="font-bold">{/* Brand */}</div>
 
           <div className="flex items-center gap-5">
