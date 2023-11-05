@@ -1,5 +1,6 @@
-import { author, book_back, book_front } from '@/assets';
+import { author, book_back, book_front, book_spine } from '@/assets';
 import Button from '@/components/button';
+import Input from '@/components/input';
 import Image from 'next/image';
 
 export default function Home() {
@@ -67,7 +68,40 @@ export default function Home() {
 
         {/* Author image */}
         <div className="aspect-square relative rounded-2xl overflow-clip">
-          <Image src={author} alt="Trust Onyekwere" className="object-cover" />
+          <Image
+            src={author}
+            alt="Trust Onyekwere"
+            className="object-cover"
+            fill
+          />
+        </div>
+      </section>
+
+      {/* Get the free copy (Newsletter signup) */}
+      <section className="flex gap-5 md:gap-10 items-center px-5 py-20 min-h-screen w-full max-w-3xl mx-auto">
+        {/* Book spine */}
+        <div className="relative w-5 md:w-10 h-full rounded-full overflow-clip">
+          <Image
+            src={book_spine}
+            alt="Developer Marketing"
+            className="object-contain"
+          />
+        </div>
+
+        {/* CTA */}
+        <div className="w-full grid gap-10">
+          <div className="grid gap-5 h-max">
+            <h2 className="text-3xl font-light">Read a free chapter</h2>
+            {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> */}
+          </div>
+
+          {/* newsletter form */}
+          <form className="grid gap-5 h-max">
+            <Input name="firstName" placeholder="Your first name" />
+            <Input name="lastName" placeholder="Your last name" />
+            <Input name="email" type="email" placeholder="Your email" />
+            <Button>Get it now</Button>
+          </form>
         </div>
       </section>
     </main>

@@ -1,9 +1,10 @@
 import book_front from './book-front.jpg';
 import book_back from './book-back.jpg';
+import book_spine from './book-spine.jpg';
 import author from './author.png';
 
 // --- Images ---
-export { book_front, book_back, author };
+export { book_front, book_back, book_spine, author };
 
 // --- Icons ---
 export function PlanetIcon() {

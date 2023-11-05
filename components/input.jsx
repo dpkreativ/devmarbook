@@ -6,7 +6,7 @@ export default function Input({ className, name, type, placeholder }) {
         name={name}
         id={name}
         placeholder={placeholder}
-        className="w-full outline-none"
+        className="w-full outline-none bg-transparent"
       />
     </div>
   );
