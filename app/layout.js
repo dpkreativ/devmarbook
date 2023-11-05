@@ -15,11 +15,13 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${inter.className} bg-[#EFEFEF]`}>
         {/* Header */}
-        <header className="p-5 w-full max-w-7xl mx-auto flex justify-between items-center sticky top-0 z-10 bg-[#EFEFEF] rounded-b-2xl shadow-lg">
-          <div>
-            <PlanetIcon />
+        <header className="bg-gradient-to-b from-zinc-200/10 backdrop-blur-2xl sticky top-0 z-10">
+          <div className="p-5 w-full max-w-7xl mx-auto flex justify-between items-center">
+            <div>
+              <PlanetIcon />
+            </div>
+            <Button>Menu</Button>
           </div>
-          <Button>Menu</Button>
         </header>
 
         {/* Main content */}
