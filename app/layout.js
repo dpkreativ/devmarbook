@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${inter.className} bg-[#EFEFEF]`}>
         {/* Header */}
-        <header className="p-5 w-full max-w-7xl mx-auto flex justify-between items-center sticky top-0 z-10">
+        <header className="p-5 w-full max-w-7xl mx-auto flex justify-between items-center sticky top-0 z-10 bg-[#EFEFEF] rounded-b-2xl shadow-lg">
           <div>
             <PlanetIcon />
           </div>
