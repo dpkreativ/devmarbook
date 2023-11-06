@@ -1,7 +1,7 @@
 import { Inter } from 'next/font/google';
 import './globals.css';
 import Button from '@/components/button';
-import { AmazonIcon, PlanetIcon } from '@/assets';
+import { AmazonIcon, LinkedInIcon, PlanetIcon, XTwitterIcon } from '@/assets';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -29,8 +29,19 @@ export default function RootLayout({ children }) {
         {children}
 
         {/* Footer */}
-        <footer className="p-5">
-          <h2>Quick links</h2>
+        <footer>
+          <div className="w-full max-w-7xl px-5 py-10 mx-auto grid gap-10">
+            <div className="flex gap-10 items-center justify-center">
+              <div>Blog</div>
+              <div>Quick preview</div>
+              <div>Get the book</div>
+            </div>
+            <div className="flex gap-10 items-center justify-center">
+              <XTwitterIcon />
+              <LinkedInIcon />
+              <PlanetIcon />
+            </div>
+          </div>
         </footer>
       </body>
     </html>
