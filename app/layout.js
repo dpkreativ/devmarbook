@@ -1,7 +1,7 @@
 import { Inter } from 'next/font/google';
 import './globals.css';
 import Button from '@/components/button';
-import { PlanetIcon } from '@/assets';
+import { AmazonIcon, PlanetIcon } from '@/assets';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -15,12 +15,13 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${inter.className} bg-[#EFEFEF]`}>
         {/* Header */}
-        <header className="bg-gradient-to-b from-zinc-200/10 backdrop-blur-2xl sticky top-0 z-10">
-          <div className="p-5 w-full max-w-7xl mx-auto flex justify-between items-center">
-            <div>
-              <PlanetIcon />
-            </div>
-            <Button>Menu</Button>
+        <header className="sticky top-0 z-10 p-5">
+          <div className="bg-gradient-to-b from-zinc-200/50 backdrop-blur-2xl rounded-xl p-5 w-full max-w-7xl mx-auto flex justify-between items-center">
+            <PlanetIcon />
+
+            <Button>
+              <AmazonIcon />
+            </Button>
           </div>
         </header>
 
