@@ -108,32 +108,39 @@ export default function Home() {
       </section>
 
       {/* Get the free copy (Newsletter signup) */}
-      <section className="flex gap-5 md:gap-10 items-center px-5 py-20 min-h-screen w-full max-w-3xl mx-auto">
-        {/* Book spine */}
-        <div className="relative w-5 md:w-10 h-full rounded-full overflow-clip shadow-xl">
-          <Image
-            src={book_spine}
-            alt="Developer Marketing"
-            className="object-contain"
-          />
-        </div>
-
+      <section className="px-5 py-20 min-h-screen w-full max-w-5xl mx-auto grid gap-10">
         {/* CTA */}
-        <div className="w-full grid gap-10">
-          <div className="grid gap-5 h-max">
-            <h2 className="text-3xl font-light text-[#786937]">
-              Read a free chapter
-            </h2>
-            {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> */}
+        <h2 className="text-3xl md:text-5xl text-center md:text-left font-light text-[#786937]">
+          Quick preview
+        </h2>
+
+        <div className="flex gap-5 md:gap-10 items-center w-full max-w-3xl mx-auto">
+          {/* Book spine */}
+          <div className="relative w-5 md:w-10 h-full rounded-full overflow-clip shadow-xl bg-[#786937]">
+            <Image
+              src={book_spine}
+              alt="Developer Marketing"
+              className="object-contain"
+            />
           </div>
 
           {/* newsletter form - there's a bug here. Find it and fix it */}
-          {/* <form className="grid gap-5 h-max">
+          <form className="grid gap-5 w-full">
             <Input name="firstName" placeholder="Your first name" />
             <Input name="lastName" placeholder="Your last name" />
             <Input name="email" type="email" placeholder="Your email" />
-            <Button>Get it now</Button>
-          </form> */}
+            <fieldset className="flex gap-5 justify-center">
+              <input type="checkbox" name="newsletter" id="newsletter" />
+              <label htmlFor="newsletter" className="text-xs">
+                Get more insights on improving your developer marketing
+                strategies.
+              </label>
+            </fieldset>
+            <Button type="submit">
+              <BookIcon />
+              <div>Read a free chapter</div>
+            </Button>
+          </form>
         </div>
       </section>
     </main>

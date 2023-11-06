@@ -1,13 +1,11 @@
-export default function Input({ className, name, type, placeholder }) {
+export default function Input({ name, type = 'text', placeholder }) {
   return (
-    <div className={`border border-black rounded-lg p-3 ${className}`}>
-      <input
-        type={type || 'text'}
-        name={name}
-        id={name}
-        placeholder={placeholder}
-        className="w-full outline-none bg-transparent"
-      />
-    </div>
+    <input
+      type={type}
+      name={name}
+      id={name}
+      placeholder={placeholder}
+      className="w-full outline-none bg-transparent border border-[#786937] rounded-lg p-3"
+    />
   );
 }
