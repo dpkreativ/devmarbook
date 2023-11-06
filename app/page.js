@@ -1,6 +1,7 @@
 import {
   AmazonIcon,
   BookIcon,
+  BookYouTubeTrailer,
   LinkedInIcon,
   PlanetIcon,
   XTwitterIcon,
@@ -8,8 +9,10 @@ import {
   book_back,
   book_front,
   book_spine,
+  reviews,
 } from '@/assets';
 import Button from '@/components/button';
+import { ReviewCard } from '@/components/card';
 import Input from '@/components/input';
 import Image from 'next/image';
 
@@ -43,7 +46,7 @@ export default function Home() {
 
         {/* Marketing content */}
         <div className="grid gap-5">
-          <h1 className="font-extrabold text-6xl md:text-7xl drop-shadow-sm">
+          <h1 className="font-extrabold text-6xl lg:text-7xl drop-shadow-sm">
             Developer Marketing
           </h1>
           <h3 className="text-[#786937]">
@@ -69,7 +72,9 @@ export default function Home() {
           </h2>
 
           {/* Feature videos */}
-          <div className="aspect-video w-full max-w-3xl mx-auto bg-slate-200 rounded-2xl shadow-2xl"></div>
+          <div className="aspect-video overflow-clip w-full max-w-3xl mx-auto bg-slate-200 rounded-2xl shadow-2xl">
+            <BookYouTubeTrailer />
+          </div>
         </div>
       </section>
 
@@ -153,10 +158,16 @@ export default function Home() {
           </h2>
 
           {/* Featured reviews */}
-          <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-            <div className="aspect-square w-full max-w-3xl mx-auto bg-slate-200 rounded-2xl shadow-2xl"></div>
-            <div className="aspect-square w-full max-w-3xl mx-auto bg-slate-200 rounded-2xl shadow-2xl"></div>
-            <div className="aspect-square w-full max-w-3xl mx-auto bg-slate-200 rounded-2xl shadow-2xl"></div>
+          <div className="grid gap-10 md:grid-cols-3 w-full max-w-3xl mx-auto">
+            {reviews?.map((review, idx) => (
+              <ReviewCard
+                key={idx}
+                content={review.content}
+                fullName={review.fullName}
+                role={review.role}
+                img={review.img}
+              />
+            ))}
           </div>
         </div>
       </section>

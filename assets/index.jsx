@@ -6,6 +6,44 @@ import author from './author.png';
 // --- Images ---
 export { book_front, book_back, book_spine, author };
 
+// --- Videos ---
+export function BookYouTubeTrailer() {
+  return (
+    <iframe
+      className="w-full h-full"
+      src="https://www.youtube.com/embed/qYaZz5K_K_o?si=kdL2B9grgnlVcS-w"
+      title="YouTube video player"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowFullScreen
+    ></iframe>
+  );
+}
+
+// --- Reviews ---
+export const reviews = [
+  {
+    fullName: 'John Doe',
+    role: 'Tech bro',
+    content:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus neque debitis dicta esse placeat dolores, cum ratione.',
+    img: author,
+  },
+  {
+    fullName: 'Jane Doe',
+    role: 'Marketing sis',
+    content:
+      'Ea nemo nihil tempora dolore, illo ad sint deleniti sunt officiis quam.',
+    img: author,
+  },
+  {
+    fullName: 'Chris Doe',
+    role: 'CEO, Chicken Curry Thai',
+    content:
+      'Voluptatibus neque debitis dicta esse placeat dolores, cum ratione.',
+    img: author,
+  },
+];
+
 // --- Icons ---
 export function PlanetIcon() {
   return (
