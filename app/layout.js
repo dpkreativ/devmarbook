@@ -31,8 +31,8 @@ export default function RootLayout({ children }) {
         {/* Footer */}
         <footer>
           <div className="w-full max-w-7xl px-5 py-10 mx-auto grid gap-10">
-            <div className="flex gap-10 items-center justify-center">
-              <div>Blog</div>
+            <div className="flex gap-10 items-center justify-center text-center">
+              <div>What's inside?</div>
               <div>Quick preview</div>
               <div>Get the book</div>
             </div>
