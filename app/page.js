@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <main>
       {/* Hero */}
-      <section className="grid md:grid-cols-2 gap-10 md:gap-20 items-center px-5 py-20 min-h-[90vh] w-full max-w-5xl mx-auto">
+      <section className="grid md:grid-cols-2 gap-10 md:gap-20 items-center px-5 pt-10 pb-20 w-full max-w-5xl mx-auto">
         {/* Images */}
         <div className="aspect-square relative">
           <div className="aspect-[5/7] w-4/6 absolute bottom-0 left-0 rounded-xl overflow-clip shadow-xl border-r border-[#FCC002]">
