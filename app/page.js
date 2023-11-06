@@ -108,7 +108,7 @@ export default function Home() {
       </section>
 
       {/* Get the free copy (Newsletter signup) */}
-      <section className="px-5 py-20 min-h-screen w-full max-w-5xl mx-auto grid gap-10">
+      <section className="px-5 py-20 w-full max-w-5xl mx-auto grid gap-10">
         {/* CTA */}
         <h2 className="text-3xl md:text-5xl text-center md:text-left font-light text-[#786937]">
           Quick preview
@@ -124,7 +124,7 @@ export default function Home() {
             />
           </div>
 
-          {/* newsletter form - there's a bug here. Find it and fix it */}
+          {/* newsletter form */}
           <form className="grid gap-5 w-full">
             <Input name="firstName" placeholder="Your first name" />
             <Input name="lastName" placeholder="Your last name" />
@@ -141,6 +141,23 @@ export default function Home() {
               <div>Read a free chapter</div>
             </Button>
           </form>
+        </div>
+      </section>
+
+      {/* Reviews */}
+      <section className="bg-[#1F55A9] text-white">
+        <div className="px-5 py-20 w-full max-w-5xl mx-auto grid gap-10">
+          {/* Section header */}
+          <h2 className="text-3xl md:text-5xl font-light text-center md:text-left">
+            Reviews so far...
+          </h2>
+
+          {/* Featured reviews */}
+          <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+            <div className="aspect-square w-full max-w-3xl mx-auto bg-slate-200 rounded-2xl shadow-2xl"></div>
+            <div className="aspect-square w-full max-w-3xl mx-auto bg-slate-200 rounded-2xl shadow-2xl"></div>
+            <div className="aspect-square w-full max-w-3xl mx-auto bg-slate-200 rounded-2xl shadow-2xl"></div>
+          </div>
         </div>
       </section>
     </main>

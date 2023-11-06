@@ -27,6 +27,11 @@ export default function RootLayout({ children }) {
 
         {/* Main content */}
         {children}
+
+        {/* Footer */}
+        <footer className="p-5">
+          <h2>Quick links</h2>
+        </footer>
       </body>
     </html>
   );
