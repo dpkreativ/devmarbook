@@ -20,7 +20,7 @@ export default function Home() {
       <section className="grid md:grid-cols-2 gap-10 md:gap-20 items-center px-5 py-20 min-h-[90vh] w-full max-w-5xl mx-auto">
         {/* Images */}
         <div className="aspect-square relative">
-          <div className="aspect-[5/7] w-4/6 absolute bottom-0 left-0 rounded-xl overflow-clip shadow-2xl border-r border-[#FCC002]">
+          <div className="aspect-[5/7] w-4/6 absolute bottom-0 left-0 rounded-xl overflow-clip shadow-xl border-r border-[#FCC002]">
             <div className="w-full h-full relative">
               <Image
                 src={book_back}
@@ -29,7 +29,7 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className="aspect-[5/7] w-4/6 absolute top-0 right-0 rounded-xl overflow-clip shadow-2xl border-r-2 border-[#348576]">
+          <div className="aspect-[5/7] w-4/6 absolute top-0 right-0 rounded-xl overflow-clip shadow-xl border-r-2 border-[#348576]">
             <div className="w-full h-full relative">
               <Image
                 src={book_front}
@@ -64,7 +64,9 @@ export default function Home() {
       <section className="bg-[#1F55A9] text-white">
         <div className="px-5 py-20 w-full max-w-5xl mx-auto grid gap-10">
           {/* Section header */}
-          <h2 className="text-3xl md:text-5xl font-light">What's inside?</h2>
+          <h2 className="text-3xl md:text-5xl font-light text-center md:text-left">
+            What's inside?
+          </h2>
 
           {/* Feature videos */}
           <div className="aspect-video w-full max-w-3xl mx-auto bg-slate-200 rounded-2xl shadow-2xl"></div>
