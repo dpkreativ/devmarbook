@@ -11,7 +11,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body className={`${inter.className} bg-[#EFEFEF]`}>
         {/* Header */}
         <header className="sticky top-0 z-10 px-3 py-5 bg-gradient-to-b from-[#1F55A9]/10">
