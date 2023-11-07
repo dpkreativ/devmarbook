@@ -1,7 +1,6 @@
 import { Inter } from 'next/font/google';
 import './globals.css';
-import Button from '@/components/button';
-import { AmazonIcon, LinkedInIcon, PlanetIcon, XTwitterIcon } from '@/assets';
+import { AmazonIcon, BlogIcon, LinkedInIcon, XTwitterIcon } from '@/assets';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -15,13 +14,27 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${inter.className} bg-[#EFEFEF]`}>
         {/* Header */}
-        <header className="sticky top-0 z-10 p-5 bg-gradient-to-b from-[#1F55A9]/10">
-          <div className="bg-gradient-to-b from-zinc-200/50 backdrop-blur-2xl rounded-xl p-5 w-full max-w-7xl mx-auto flex justify-between items-center">
-            <PlanetIcon />
+        <header className="sticky top-0 z-10 px-3 py-5 bg-gradient-to-b from-[#1F55A9]/10">
+          <div className="bg-[#EFEFEF] text-[#1F55A9] rounded-full p-5 w-full max-w-7xl mx-auto flex justify-between items-center">
+            <a
+              href="https://blog.devmarbook.com"
+              className="flex gap-2 items-center"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <BlogIcon />
+              <span>Blog</span>
+            </a>
 
-            <Button>
+            <a
+              href="https://example.com"
+              className="flex gap-2 items-center"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <AmazonIcon />
-            </Button>
+              <span>Buy on Amazon</span>
+            </a>
           </div>
         </header>
 
@@ -29,7 +42,7 @@ export default function RootLayout({ children }) {
         {children}
 
         {/* Footer */}
-        <footer>
+        <footer className="text-[#1F55A9]">
           <div className="w-full max-w-7xl px-5 py-10 mx-auto grid gap-10">
             <div className="flex gap-10 items-center justify-center text-center">
               <div>What's inside?</div>
@@ -37,9 +50,27 @@ export default function RootLayout({ children }) {
               <div>Get the book</div>
             </div>
             <div className="flex gap-10 items-center justify-center">
-              <XTwitterIcon />
-              <LinkedInIcon />
-              <PlanetIcon />
+              <a
+                href="https://twitter.com/devmarbook"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <XTwitterIcon />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/trust-onyekwere/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <LinkedInIcon />
+              </a>
+              <a
+                href="https://blog.devmarbook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <BlogIcon />
+              </a>
             </div>
           </div>
         </footer>

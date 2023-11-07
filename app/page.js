@@ -3,7 +3,7 @@ import {
   BookIcon,
   BookYouTubeTrailer,
   LinkedInIcon,
-  PlanetIcon,
+  MediumIcon,
   XTwitterIcon,
   author,
   book_back,
@@ -15,6 +15,7 @@ import Button from '@/components/button';
 import { ReviewCard } from '@/components/card';
 import Input from '@/components/input';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -52,14 +53,22 @@ export default function Home() {
           <h3 className="text-[#786937]">
             A comprehensive approach to reaching and engaging developers
           </h3>
-          <Button>
-            <AmazonIcon />
-            <div>Buy on Amazon</div>
-          </Button>
-          <Button>
-            <BookIcon />
-            <div>Read a free chapter</div>
-          </Button>
+          <a
+            href="https://example.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button>
+              <AmazonIcon />
+              <div>Buy on Amazon</div>
+            </Button>
+          </a>
+          <Link href="#read-free-chapter">
+            <Button>
+              <BookIcon />
+              <div>Read a free chapter</div>
+            </Button>
+          </Link>
         </div>
       </section>
 
@@ -88,16 +97,37 @@ export default function Home() {
 
           {/* Author bio */}
           <p>
-            Trust Onyekwere is a seasoned Developer Relations Manager with over
+            Trust Onyekwere is a seasoned Developer Relations Expert with over
             five years of experience building developer communities, driving
             product adoption, and leading technical outreach programs.
+            <br />
+            Trust is excited to share his knowledge and experience via the
+            Developer Marketing book.
           </p>
 
           {/* Author socials */}
           <div className="flex gap-10 justify-center md:justify-normal items-center">
-            <XTwitterIcon />
-            <LinkedInIcon />
-            <PlanetIcon />
+            <a
+              href="https://twitter.com/iamtjah"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <XTwitterIcon />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/trust-onyekwere/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <LinkedInIcon />
+            </a>
+            <a
+              href="https://medium.com/@tjah"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <MediumIcon />
+            </a>
           </div>
         </div>
 
@@ -113,7 +143,10 @@ export default function Home() {
       </section>
 
       {/* Get the free copy (Newsletter signup) */}
-      <section className="px-5 py-20 w-full max-w-5xl mx-auto grid gap-10">
+      <section
+        id="read-free-chapter"
+        className="px-5 py-20 w-full max-w-5xl mx-auto grid gap-10"
+      >
         {/* CTA */}
         <h2 className="text-3xl md:text-5xl text-center md:text-left font-light text-[#786937]">
           Quick preview
