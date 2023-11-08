@@ -1,6 +1,7 @@
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { AmazonIcon, BlogIcon, LinkedInIcon, XTwitterIcon } from '@/assets';
+import Link from 'next/link';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -26,15 +27,23 @@ export default function RootLayout({ children }) {
               <span>Blog</span>
             </a>
 
-            <a
-              href="https://example.com"
-              className="flex gap-2 items-center"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <AmazonIcon />
-              <span>Buy on Amazon</span>
-            </a>
+            <nav className="flex gap-10 items-center justify-center text-center">
+              <Link href="#whats-inside" className="hidden md:block">
+                What's inside?
+              </Link>
+              <Link href="#quick-preview" className="hidden md:block">
+                Quick preview
+              </Link>
+              <a
+                href="https://example.com"
+                className="flex gap-2 items-center"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <AmazonIcon />
+                <span>Buy on Amazon</span>
+              </a>
+            </nav>
           </div>
         </header>
 
@@ -44,11 +53,18 @@ export default function RootLayout({ children }) {
         {/* Footer */}
         <footer className="text-[#1F55A9]">
           <div className="w-full max-w-7xl px-5 py-10 mx-auto grid gap-10">
-            <div className="flex gap-10 items-center justify-center text-center">
-              <div>What's inside?</div>
-              <div>Quick preview</div>
-              <div>Get the book</div>
-            </div>
+            <nav className="flex gap-10 items-center justify-center text-center">
+              <Link href="#whats-inside">What's inside?</Link>
+              <Link href="#quick-preview">Quick preview</Link>
+              <a
+                href="https://example.com"
+                className="flex gap-2 items-center"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Get the book
+              </a>
+            </nav>
             <div className="flex gap-10 items-center justify-center">
               <a
                 href="https://twitter.com/devmarbook"

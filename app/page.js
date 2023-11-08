@@ -7,6 +7,7 @@ import {
   XTwitterIcon,
   author,
   book_back,
+  book_dd,
   book_front,
   book_spine,
   reviews,
@@ -21,7 +22,7 @@ export default function Home() {
   return (
     <main>
       {/* Hero */}
-      <section className="grid md:grid-cols-2 gap-10 md:gap-20 items-center px-5 pt-10 pb-20 w-full max-w-5xl mx-auto">
+      <section className="grid md:grid-cols-2 gap-10 md:gap-20 items-center px-5 pt-10 pb-24 w-full max-w-5xl mx-auto">
         {/* Images */}
         <div className="aspect-square relative">
           <div className="aspect-[5/7] w-4/6 absolute bottom-0 left-0 rounded-xl overflow-clip shadow-xl border-r border-[#FCC002]">
@@ -63,7 +64,7 @@ export default function Home() {
               <div>Buy on Amazon</div>
             </Button>
           </a>
-          <Link href="#read-free-chapter">
+          <Link href="#quick-preview">
             <Button>
               <BookIcon />
               <div>Read a free chapter</div>
@@ -73,8 +74,8 @@ export default function Home() {
       </section>
 
       {/* Features */}
-      <section className="bg-[#1F55A9] text-white">
-        <div className="px-5 py-20 w-full max-w-5xl mx-auto grid gap-10">
+      <section id="whats-inside" className="bg-[#1F55A9] text-white">
+        <div className="px-5 py-24 w-full max-w-5xl mx-auto grid gap-10">
           {/* Section header */}
           <h2 className="text-3xl md:text-5xl font-light text-center md:text-left">
             What's inside?
@@ -86,30 +87,47 @@ export default function Home() {
           </div>
 
           {/* Feature text */}
-          <div>
-            <h3 className='text-2xl font-bold'>Developer Marketing Strategies</h3>
-            <p>
-              Insightful tips on different strategies for effectively marketing
-              to developers.
-            </p>
+          <div className="w-full text-center lg:text-left max-w-2xl mx-auto grid gap-10 py-5">
+            {/* Feature text */}
+            <div className="grid gap-5">
+              <h3 className="text-xl lg:text-3xl font-bold">
+                Developer Marketing Strategies
+              </h3>
+              <p>
+                Insightful tips on different strategies for effectively
+                marketing to developers.
+              </p>
+            </div>
+
+            {/* Feature text */}
+            <div className="lg:text-right grid gap-5">
+              <h3 className="text-xl lg:text-3xl font-bold">
+                Community Building
+              </h3>
+              <p>
+                Leveraging the power of community to interact with developers.
+              </p>
+            </div>
+
+            {/* Feature text */}
+            <div className="grid gap-5">
+              <h3 className="text-xl lg:text-3xl font-bold">
+                Partnerships and Influencer Marketing
+              </h3>
+              <p>
+                Connecting with the right people to forge stronger partnerships.
+              </p>
+            </div>
           </div>
 
-          {/* Feature text */}
-          <div className='text-right'>
-            <h3 className='text-2xl font-bold'>Community Building</h3>
-            <p>
-              Learn how to leverage the power of community to interact with
-              developers.
-            </p>
-          </div>
-
-          {/* Feature text */}
-          <div>
-            <h3 className='text-2xl font-bold'>Partnerships and Influencer Marketing</h3>
-            <p>
-              Forge stronger partnerships and connect with the right influencers
-              to spread the word.
-            </p>
+          {/* Feature image */}
+          <div className="w-full max-w-sm mx-auto aspect-square relative drop-shadow-md">
+            <Image
+              src={book_dd}
+              alt="Developer marketing book mockup"
+              className="object-contain"
+              fill
+            />
           </div>
 
           {/* Get on Amazon */}
@@ -127,7 +145,7 @@ export default function Home() {
       </section>
 
       {/* About the author */}
-      <section className="grid md:grid-cols-2 gap-10 md:gap-20 items-center px-5 py-20 min-h-screen w-full max-w-5xl mx-auto">
+      <section className="grid md:grid-cols-2 gap-10 md:gap-20 items-center px-5 py-24 w-full max-w-5xl mx-auto">
         <div className="grid gap-10 text-center md:text-left">
           {/* Section header */}
           <h2 className="text-3xl md:text-5xl font-light text-[#786937]">
@@ -183,8 +201,8 @@ export default function Home() {
 
       {/* Get the free copy (Newsletter signup) */}
       <section
-        id="read-free-chapter"
-        className="px-5 py-20 w-full max-w-5xl mx-auto grid gap-10"
+        id="quick-preview"
+        className="px-5 py-24 w-full max-w-5xl mx-auto grid gap-10"
       >
         {/* CTA */}
         <h2 className="text-3xl md:text-5xl text-center md:text-left font-light text-[#786937]">
@@ -223,7 +241,7 @@ export default function Home() {
 
       {/* Reviews */}
       <section className="bg-[#1F55A9] text-white">
-        <div className="px-5 py-20 w-full max-w-5xl mx-auto grid gap-10">
+        <div className="px-5 py-24 w-full max-w-5xl mx-auto grid gap-10">
           {/* Section header */}
           <h2 className="text-3xl md:text-5xl font-light text-center md:text-left">
             Reviews so far...

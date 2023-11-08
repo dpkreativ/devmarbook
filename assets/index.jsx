@@ -2,9 +2,10 @@ import book_front from './book-front.jpg';
 import book_back from './book-back.jpg';
 import book_spine from './book-spine.jpg';
 import author from './author.png';
+import book_dd from './dd.png';
 
 // --- Images ---
-export { book_front, book_back, book_spine, author };
+export { book_front, book_back, book_spine, author, book_dd };
 
 // --- Videos ---
 export function BookYouTubeTrailer() {
