@@ -80,10 +80,49 @@ export default function Home() {
             What's inside?
           </h2>
 
-          {/* Feature videos */}
+          {/* Feature video */}
           <div className="aspect-video overflow-clip w-full max-w-3xl mx-auto bg-slate-200 rounded-2xl shadow-2xl">
             <BookYouTubeTrailer />
           </div>
+
+          {/* Feature text */}
+          <div>
+            <h3 className='text-2xl font-bold'>Developer Marketing Strategies</h3>
+            <p>
+              Insightful tips on different strategies for effectively marketing
+              to developers.
+            </p>
+          </div>
+
+          {/* Feature text */}
+          <div className='text-right'>
+            <h3 className='text-2xl font-bold'>Community Building</h3>
+            <p>
+              Learn how to leverage the power of community to interact with
+              developers.
+            </p>
+          </div>
+
+          {/* Feature text */}
+          <div>
+            <h3 className='text-2xl font-bold'>Partnerships and Influencer Marketing</h3>
+            <p>
+              Forge stronger partnerships and connect with the right influencers
+              to spread the word.
+            </p>
+          </div>
+
+          {/* Get on Amazon */}
+          <a
+            href="https://example.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button>
+              <AmazonIcon />
+              <div>Get it on Amazon</div>
+            </Button>
+          </a>
         </div>
       </section>
 
