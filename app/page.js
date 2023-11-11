@@ -13,6 +13,7 @@ import {
   book_spine,
   reviews,
 } from '@/assets';
+import AnimatedText from '@/components/animated-text';
 import Button from '@/components/button';
 import { ReviewCard } from '@/components/card';
 import Carousel from '@/components/carousel';
@@ -50,9 +51,12 @@ export default function Home() {
 
         {/* Marketing content */}
         <div className="grid gap-5">
-          <h1 className="font-extrabold text-6xl lg:text-7xl drop-shadow-sm">
-            Developer Marketing
-          </h1>
+          <AnimatedText
+            text={`Developer Marketing`}
+            el={`h1`}
+            className="font-extrabold text-6xl lg:text-7xl drop-shadow-sm"
+          />
+
           <h3 className="text-[#786937]">
             A comprehensive approach to reaching and engaging developers
           </h3>
@@ -79,9 +83,11 @@ export default function Home() {
       <section id="whats-inside" className="bg-[#1F55A9] text-white">
         <div className="px-5 py-24 w-full max-w-5xl mx-auto grid gap-10">
           {/* Section header */}
-          <h2 className="text-3xl md:text-5xl font-light text-center md:text-left">
-            What's inside?
-          </h2>
+          <AnimatedText
+            text={`What's inside?`}
+            el={`h2`}
+            className="text-3xl md:text-5xl font-light text-center md:text-left"
+          />
 
           {/* Feature video */}
           <div className="aspect-video overflow-clip w-full max-w-3xl mx-auto bg-slate-200 rounded-2xl shadow-2xl">
@@ -160,9 +166,11 @@ export default function Home() {
       <section className="grid md:grid-cols-2 gap-10 md:gap-20 items-center px-5 py-24 w-full max-w-5xl mx-auto">
         <div className="grid gap-10 text-center md:text-left">
           {/* Section header */}
-          <h2 className="text-3xl md:text-5xl font-light text-[#786937]">
-            About the author
-          </h2>
+          <AnimatedText
+            text={`About the author`}
+            el={`h2`}
+            className="text-3xl md:text-5xl font-light text-[#786937]"
+          />
 
           {/* Author bio */}
           <div className="grid gap-5">
@@ -221,9 +229,11 @@ export default function Home() {
         className="px-5 py-24 w-full max-w-5xl mx-auto grid gap-10"
       >
         {/* CTA */}
-        <h2 className="text-3xl md:text-5xl text-center md:text-left font-light text-[#786937]">
-          Quick preview
-        </h2>
+        <AnimatedText
+          text={`Quick preview`}
+          el={`h2`}
+          className="text-3xl md:text-5xl text-center md:text-left font-light text-[#786937]"
+        />
 
         <div className="flex gap-5 md:gap-10 items-center w-full max-w-3xl mx-auto">
           {/* Book spine */}
@@ -259,9 +269,11 @@ export default function Home() {
       <section className="bg-[#1F55A9] text-white">
         <div className="px-5 py-24 w-full max-w-5xl mx-auto grid gap-10">
           {/* Section header */}
-          <h2 className="text-3xl md:text-5xl font-light text-center md:text-left">
-            Reviews so far...
-          </h2>
+          <AnimatedText
+            text={`Reviews so far...`}
+            el={`h2`}
+            className="text-3xl md:text-5xl font-light text-center md:text-left"
+          />
 
           {/* Featured reviews */}
           <Carousel>
