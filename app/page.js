@@ -2,6 +2,7 @@ import {
   AmazonIcon,
   BookIcon,
   BookYouTubeTrailer,
+  BulletIcon,
   LinkedInIcon,
   MediumIcon,
   XTwitterIcon,
@@ -86,37 +87,47 @@ export default function Home() {
             <BookYouTubeTrailer />
           </div>
 
-          {/* Feature text */}
-          <div className="w-full text-center lg:text-left max-w-2xl mx-auto grid gap-10 py-5">
+          {/* Feature texts */}
+          <div className="w-full max-w-2xl mx-auto grid gap-10 py-5">
             {/* Feature text */}
-            <div className="grid gap-5">
-              <h3 className="text-xl lg:text-3xl font-bold">
-                Developer Marketing Strategies
-              </h3>
-              <p>
-                Insightful tips on different strategies for effectively
-                marketing to developers.
-              </p>
+            <div className="flex gap-3">
+              <BulletIcon />
+              <div className="grid gap-2">
+                <h3 className="text-xl lg:text-3xl font-bold">
+                  Developer Marketing Strategies
+                </h3>
+                <p>
+                  Insightful tips on different strategies for effectively
+                  marketing to developers.
+                </p>
+              </div>
             </div>
 
             {/* Feature text */}
-            <div className="lg:text-right grid gap-5">
-              <h3 className="text-xl lg:text-3xl font-bold">
-                Community Building
-              </h3>
-              <p>
-                Leveraging the power of community to interact with developers.
-              </p>
+            <div className="flex gap-3">
+              <BulletIcon />
+              <div className="grid gap-2">
+                <h3 className="text-xl lg:text-3xl font-bold">
+                  Community Building
+                </h3>
+                <p>
+                  Leveraging the power of community to interact with developers.
+                </p>
+              </div>
             </div>
 
             {/* Feature text */}
-            <div className="grid gap-5">
-              <h3 className="text-xl lg:text-3xl font-bold">
-                Partnerships and Influencer Marketing
-              </h3>
-              <p>
-                Connecting with the right people to forge stronger partnerships.
-              </p>
+            <div className="flex gap-3">
+              <BulletIcon />
+              <div className="grid gap-2">
+                <h3 className="text-xl lg:text-3xl font-bold">
+                  Partnerships and Influencer Marketing
+                </h3>
+                <p>
+                  Connecting with the right people to forge stronger
+                  partnerships.
+                </p>
+              </div>
             </div>
           </div>
 
