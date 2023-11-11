@@ -2,6 +2,8 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import { AmazonIcon, BlogIcon, LinkedInIcon, XTwitterIcon } from '@/assets';
 import Link from 'next/link';
+import { WebVitals } from '@/components/web-vitals';
+import Script from 'next/script';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -14,6 +16,19 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.className} bg-[#EFEFEF]`}>
+        {/* Analytics */}
+        <Script src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID" />
+        <Script id="google-analytics">
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+ 
+          gtag('config', 'GA_MEASUREMENT_ID');
+        `}
+        </Script>
+        <WebVitals />
+
         {/* Header */}
         <header className="sticky top-0 z-10 px-3 py-5 bg-gradient-to-b from-[#1F55A9]/10">
           <div className="bg-[#EFEFEF] text-[#1F55A9] rounded-full p-5 w-full max-w-7xl mx-auto flex justify-between items-center">
