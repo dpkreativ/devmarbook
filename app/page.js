@@ -153,14 +153,18 @@ export default function Home() {
           </h2>
 
           {/* Author bio */}
-          <p>
-            Trust Onyekwere is a seasoned Developer Relations Expert with over
-            five years of experience building developer communities, driving
-            product adoption, and leading technical outreach programs.
-            <br />
-            Trust is excited to share his knowledge and experience via the
-            Developer Marketing book.
-          </p>
+          <div className="grid gap-5">
+            <p>
+              Trust Onyekwere is a Developer Relations Expert with over five
+              years of experience building developer communities, driving
+              product adoption, and leading technical outreach programs.
+            </p>
+            <p>
+              His expertise and insights will be unveiled in his book -
+              Developer Marketing, empowering aspiring and experienced DevRel
+              professionals alike.
+            </p>
+          </div>
 
           {/* Author socials */}
           <div className="flex gap-10 justify-center md:justify-normal items-center">
