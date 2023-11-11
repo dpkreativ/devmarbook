@@ -15,6 +15,7 @@ import {
 } from '@/assets';
 import Button from '@/components/button';
 import { ReviewCard } from '@/components/card';
+import Carousel from '@/components/carousel';
 import Input from '@/components/input';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -263,17 +264,18 @@ export default function Home() {
           </h2>
 
           {/* Featured reviews */}
-          <div className="grid gap-10 md:grid-cols-3 w-full max-w-3xl mx-auto">
+          <Carousel>
             {reviews?.map((review, idx) => (
-              <ReviewCard
-                key={idx}
-                content={review.content}
-                fullName={review.fullName}
-                role={review.role}
-                img={review.img}
-              />
+              <div key={idx} className="flex-[0_0_auto] max-w-full min-w-0">
+                <ReviewCard
+                  content={review.content}
+                  fullName={review.fullName}
+                  role={review.role}
+                  img={review.img}
+                />
+              </div>
             ))}
-          </div>
+          </Carousel>
         </div>
       </section>
     </main>

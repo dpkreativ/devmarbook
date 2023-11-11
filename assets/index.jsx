@@ -43,6 +43,27 @@ export const reviews = [
       'Voluptatibus neque debitis dicta esse placeat dolores, cum ratione.',
     img: author,
   },
+  {
+    fullName: 'John Doe',
+    role: 'Tech bro',
+    content:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus neque debitis dicta esse placeat dolores, cum ratione.',
+    img: author,
+  },
+  {
+    fullName: 'Jane Doe',
+    role: 'Marketing sis',
+    content:
+      'Ea nemo nihil tempora dolore, illo ad sint deleniti sunt officiis quam.',
+    img: author,
+  },
+  {
+    fullName: 'Chris Doe',
+    role: 'CEO, Chicken Curry Thai',
+    content:
+      'Voluptatibus neque debitis dicta esse placeat dolores, cum ratione.',
+    img: author,
+  },
 ];
 
 // --- Icons ---
