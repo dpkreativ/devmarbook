@@ -52,7 +52,7 @@ export default function Home() {
         {/* Marketing content */}
         <div className="grid gap-5">
           <AnimatedText
-            text={`Developer Marketing`}
+            text={`The Developer Marketing Book`}
             el={`h1`}
             className="font-extrabold text-6xl lg:text-7xl drop-shadow-sm"
           />
@@ -131,8 +131,8 @@ export default function Home() {
                   Partnerships and Influencer Marketing
                 </h3>
                 <p>
-                  Connecting with the right people to forge stronger
-                  partnerships.
+                  Connecting with the right people to forge stronger developer
+                  engagement.
                 </p>
               </div>
             </div>
@@ -253,8 +253,7 @@ export default function Home() {
             <fieldset className="flex gap-5 justify-center">
               <input type="checkbox" name="newsletter" id="newsletter" />
               <label htmlFor="newsletter" className="text-xs">
-                Get more insights on improving your developer marketing
-                strategies.
+                Get more insights on improving your developer marketing game.
               </label>
             </fieldset>
             <Button type="submit">
