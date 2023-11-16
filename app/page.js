@@ -18,7 +18,7 @@ import AnimatedText from '@/components/animated-text';
 import Button from '@/components/button';
 import { ReviewCard } from '@/components/card';
 import Carousel from '@/components/carousel';
-import Input from '@/components/input';
+import Newsletter from '@/components/newsletter';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -239,21 +239,7 @@ export default function Home() {
           </div>
 
           {/* newsletter form */}
-          <form className="grid gap-5 w-full">
-            <Input name="firstName" placeholder="Your first name" />
-            <Input name="lastName" placeholder="Your last name" />
-            <Input name="email" type="email" placeholder="Your email" />
-            <fieldset className="flex gap-5 justify-center">
-              <input type="checkbox" name="newsletter" id="newsletter" />
-              <label htmlFor="newsletter" className="text-xs">
-                Get more insights on improving your developer marketing game.
-              </label>
-            </fieldset>
-            <Button type="submit">
-              <BookIcon />
-              <div>Read a free chapter</div>
-            </Button>
-          </form>
+          <Newsletter />
         </div>
       </section>
 
