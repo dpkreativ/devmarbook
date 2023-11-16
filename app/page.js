@@ -146,9 +146,16 @@ export default function Home() {
           </div>
 
           {/* Get on Amazon */}
-          <a href={book_link} target="_blank" rel="noopener noreferrer">
+          <a
+            href={book_link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border border-white rounded-full w-max mx-auto overflow-clip"
+          >
             <Button>
-              <AmazonIcon />
+              <div className="animate-pulse">
+                <AmazonIcon />
+              </div>
               <div>Get it on Amazon</div>
             </Button>
           </a>
