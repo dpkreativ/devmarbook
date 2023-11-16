@@ -10,6 +10,7 @@ import {
   book_back,
   book_dd,
   book_front,
+  book_link,
   book_spine,
   reviews,
 } from '@/assets';
@@ -60,11 +61,7 @@ export default function Home() {
           <h3 className="text-[#786937]">
             A comprehensive approach to reaching and engaging developers
           </h3>
-          <a
-            href="https://example.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href={book_link} target="_blank" rel="noopener noreferrer">
             <Button>
               <AmazonIcon />
               <div>Buy on Amazon</div>
@@ -149,11 +146,7 @@ export default function Home() {
           </div>
 
           {/* Get on Amazon */}
-          <a
-            href="https://example.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href={book_link} target="_blank" rel="noopener noreferrer">
             <Button>
               <AmazonIcon />
               <div>Get it on Amazon</div>

@@ -20,6 +20,9 @@ export function BookYouTubeTrailer() {
   );
 }
 
+// --- Book link ---
+export const book_link = 'https://a.co/d/hU4ZCYq';
+
 // --- Reviews ---
 export const reviews = [
   {

@@ -1,6 +1,12 @@
 import { Inter } from 'next/font/google';
 import './globals.css';
-import { AmazonIcon, BlogIcon, LinkedInIcon, XTwitterIcon } from '@/assets';
+import {
+  AmazonIcon,
+  BlogIcon,
+  LinkedInIcon,
+  XTwitterIcon,
+  book_link,
+} from '@/assets';
 import Link from 'next/link';
 import { WebVitals } from '@/components/web-vitals';
 import Script from 'next/script';
@@ -50,7 +56,7 @@ export default function RootLayout({ children }) {
                 Quick preview
               </Link>
               <a
-                href="https://example.com"
+                href={book_link}
                 className="flex gap-2 items-center"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -72,7 +78,7 @@ export default function RootLayout({ children }) {
               <Link href="#whats-inside">What's inside?</Link>
               <Link href="#quick-preview">Quick preview</Link>
               <a
-                href="https://example.com"
+                href={book_link}
                 className="flex gap-2 items-center"
                 target="_blank"
                 rel="noopener noreferrer"
