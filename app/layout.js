@@ -16,6 +16,7 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata = {
   title: 'Developer Marketing',
   description: 'A comprehensive approach to reaching and engaging developers',
+  metadataBase: new URL('https://devmarbook.com'),
 };
 
 export default function RootLayout({ children }) {
