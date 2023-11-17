@@ -6,7 +6,12 @@ export function ReviewCard({ content, fullName, img, role }) {
       <div className="w-full flex gap-3">
         {/* user image */}
         <div className="aspect-square h-12 rounded-full bg-slate-400 relative overflow-clip">
-          <Image src={img} alt={fullName} fill className="object-cover" />
+          <Image
+            src={img}
+            alt={fullName}
+            placeholder="blur"
+            className="object-cover"
+          />
         </div>
         {/* user profile */}
         <div className="text-[#786937]">

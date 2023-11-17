@@ -1,16 +1,28 @@
 'use client';
-import { useFormState } from 'react-dom';
-import { BookIcon } from '@/assets';
+import { useFormState, useFormStatus } from 'react-dom';
+import { BookIcon, SpinnerIcon } from '@/assets';
 import Button from './button';
 import Input from './input';
 import { convertkit } from '@/lib/utils';
+import AnimatedText from './animated-text';
 
 export default function Newsletter() {
   const [state, formAction] = useFormState(convertkit, {});
-  console.log('Form State: ', state?.message);
-  // console.log('Form Action: ', formAction);
 
-  return (
+  return state?.message === 'successful' ? (
+    <div className="grid gap-5">
+      <AnimatedText
+        text={`Successful!`}
+        el={`h3`}
+        className="font-extrabold text-5xl lg:text-7xl drop-shadow-sm"
+      />
+
+      <p>
+        Thanks, {state.user.firstName}. Please check your email for the free
+        chapter.
+      </p>
+    </div>
+  ) : (
     <form className="grid gap-5 w-full" action={formAction}>
       <Input name="firstName" placeholder="Your first name" />
       <Input name="lastName" placeholder="Your last name" />
@@ -21,10 +33,27 @@ export default function Newsletter() {
           Get more insights on improving your developer marketing game.
         </label>
       </fieldset>
-      <Button type="submit">
-        <BookIcon />
-        <div>Read a free chapter</div>
-      </Button>
+      <Submit />
     </form>
+  );
+}
+
+function Submit() {
+  const { pending } = useFormStatus();
+
+  return (
+    <Button type="submit" disabled={pending}>
+      {pending ? (
+        <>
+          <SpinnerIcon />
+          <div>Sending...</div>
+        </>
+      ) : (
+        <>
+          <BookIcon />
+          <div>Read a free chapter</div>
+        </>
+      )}
+    </Button>
   );
 }

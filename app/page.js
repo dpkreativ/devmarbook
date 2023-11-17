@@ -35,6 +35,8 @@ export default function Home() {
                 src={book_back}
                 alt="Developer marketing back cover"
                 className="object-cover"
+                priority
+                placeholder="blur"
               />
             </div>
           </div>
@@ -45,6 +47,7 @@ export default function Home() {
                 alt="Developer marketing front cover"
                 className="object-cover"
                 priority
+                placeholder="blur"
               />
             </div>
           </div>
@@ -141,7 +144,6 @@ export default function Home() {
               src={book_dd}
               alt="Developer marketing book mockup"
               className="object-contain"
-              fill
             />
           </div>
 
@@ -150,7 +152,7 @@ export default function Home() {
             href={book_link}
             target="_blank"
             rel="noopener noreferrer"
-            className="border border-white rounded-full w-max mx-auto overflow-clip"
+            className="border-2 border-white rounded-full w-max mx-auto overflow-clip shadow-xl"
           >
             <Button>
               <div className="animate-pulse">
@@ -214,12 +216,7 @@ export default function Home() {
 
         {/* Author image */}
         <div className="aspect-square relative rounded-2xl overflow-clip">
-          <Image
-            src={author}
-            alt="Trust Onyekwere"
-            className="object-cover"
-            fill
-          />
+          <Image src={author} alt="Trust Onyekwere" className="object-cover" />
         </div>
       </section>
 
@@ -242,6 +239,7 @@ export default function Home() {
               src={book_spine}
               alt="Developer Marketing"
               className="object-contain"
+              placeholder="blur"
             />
           </div>
 
