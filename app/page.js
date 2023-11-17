@@ -216,7 +216,13 @@ export default function Home() {
 
         {/* Author image */}
         <div className="aspect-square relative rounded-2xl overflow-clip">
-          <Image src={author} alt="Trust Onyekwere" className="object-cover" />
+          <Image
+            src={author}
+            alt="Trust Onyekwere"
+            className="object-cover"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
         </div>
       </section>
 
