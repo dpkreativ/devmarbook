@@ -13,9 +13,11 @@ export function BookYouTubeTrailer() {
     <iframe
       className="w-full h-full"
       src="https://www.youtube.com/embed/qYaZz5K_K_o?si=kdL2B9grgnlVcS-w"
-      title="YouTube video player"
+      title="The Developer Marketing Book Trailer"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       allowFullScreen
+      srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/qYaZz5K_K_o?autoplay=1><img src=https://img.youtube.com/vi/qYaZz5K_K_o/hqdefault.jpg alt='The Developer Marketing Book Trailer'><span>▶</span></a>"
+      frameBorder="0"
     ></iframe>
   );
 }
@@ -188,7 +190,7 @@ export function BulletIcon() {
 export function SpinnerIcon() {
   return (
     <svg
-      className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+      className="animate-spin h-5 w-5 text-white"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
