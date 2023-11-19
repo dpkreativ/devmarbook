@@ -19,19 +19,23 @@ export const metadata = {
   metadataBase: new URL('https://devmarbook.com'),
 };
 
+const GTAG_ID = process.env.GTAG_ID;
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.className} bg-[#EFEFEF]`}>
         {/* Analytics */}
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-4BPY6467EH" />
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GTAG_ID}`}
+        />
         <Script id="google-analytics">
           {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
  
-          gtag('config', 'G-4BPY6467EH');
+          gtag('config', '${GTAG_ID}');
         `}
         </Script>
         <WebVitals />
