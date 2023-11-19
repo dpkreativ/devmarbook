@@ -3,11 +3,11 @@ import { useFormState, useFormStatus } from 'react-dom';
 import { BookIcon, SpinnerIcon } from '@/assets';
 import Button from './button';
 import Input from './input';
-import { convertkit } from '@/lib/utils';
 import AnimatedText from './animated-text';
+import { saveToConvertkit } from '@/lib/actions';
 
 export default function Newsletter() {
-  const [state, formAction] = useFormState(convertkit, {});
+  const [state, formAction] = useFormState(saveToConvertkit, {});
 
   return state?.message === 'successful' ? (
     <div className="grid gap-5">
