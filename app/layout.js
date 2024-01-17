@@ -14,7 +14,7 @@ import Script from 'next/script';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'Developer Marketing',
+  title: 'The Developer Marketing Book',
   description: 'A comprehensive approach to reaching and engaging developers',
   metadataBase: new URL('https://devmarbook.com'),
 };
