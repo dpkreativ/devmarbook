@@ -28,17 +28,17 @@ export const book_link = 'https://a.co/d/hU4ZCYq';
 // --- Reviews ---
 export const reviews = [
   {
-    fullName: 'John Doe',
-    role: 'Tech bro',
+    fullName: 'Sarah Mouton',
+    role: 'Developer Marketing at Hubspot',
     content:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus neque debitis dicta esse placeat dolores, cum ratione.',
+      'Great book to give some insights into the world of developer marketing. I wish I had it when I started.',
     img: author,
   },
   {
-    fullName: 'Jane Doe',
-    role: 'Marketing sis',
+    fullName: 'Richard Hurring',
+    role: 'Founder & CEO at Catchy',
     content:
-      'Ea nemo nihil tempora dolore, illo ad sint deleniti sunt officiis quam.',
+      "I like that you are using 'real' examples of companies and individuals to get your points across. I also like that you haven't fallen into the classic 'Developers hate marketing' trap.",
     img: author,
   },
   {

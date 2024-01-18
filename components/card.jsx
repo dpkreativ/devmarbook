@@ -5,14 +5,14 @@ export function ReviewCard({ content, fullName, img, role }) {
     <div className="p-5 w-56 md:w-64 h-full grid gap-3 text-black bg-slate-200 rounded-2xl shadow-xl">
       <div className="w-full flex gap-3">
         {/* user image */}
-        <div className="aspect-square h-12 rounded-full bg-slate-400 relative overflow-clip">
+        {/* <div className="aspect-square h-12 rounded-full bg-slate-400 relative overflow-clip">
           <Image
             src={img}
             alt={fullName}
             placeholder="blur"
             className="object-cover"
           />
-        </div>
+        </div> */}
         {/* user profile */}
         <div>
           <p>{fullName}</p>
