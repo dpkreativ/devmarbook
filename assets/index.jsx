@@ -42,31 +42,17 @@ export const reviews = [
     img: author,
   },
   {
-    fullName: 'Chris Doe',
-    role: 'CEO, Chicken Curry Thai',
+    fullName: 'Candor Dennis',
+    role: 'Developer Community Manager',
     content:
-      'Voluptatibus neque debitis dicta esse placeat dolores, cum ratione.',
+      'I recommend this read for anyone looking to build a community around a developer tool. It has firm insights into specific parts of Developer Marketing.',
     img: author,
   },
   {
-    fullName: 'John Doe',
-    role: 'Tech bro',
+    fullName: 'Sophia Iroegbu',
+    role: 'Developer Advocate',
     content:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus neque debitis dicta esse placeat dolores, cum ratione.',
-    img: author,
-  },
-  {
-    fullName: 'Jane Doe',
-    role: 'Marketing sis',
-    content:
-      'Ea nemo nihil tempora dolore, illo ad sint deleniti sunt officiis quam.',
-    img: author,
-  },
-  {
-    fullName: 'Chris Doe',
-    role: 'CEO, Chicken Curry Thai',
-    content:
-      'Voluptatibus neque debitis dicta esse placeat dolores, cum ratione.',
+      "This is one of the best and well written books about developer marketing and relations that I've read. It's a must read for one getting started in these fields and it's beginner friendly as well. A solid 10/10.",
     img: author,
   },
 ];
