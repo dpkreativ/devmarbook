@@ -1,27 +1,11 @@
-import Image from 'next/image';
-
-export function ReviewCard({ content, fullName, img, role }) {
+export function ReviewCard({ content, fullName, role }) {
   return (
-    <div className="p-5 w-56 md:w-64 h-full grid gap-3 text-black bg-slate-200 rounded-2xl shadow-xl">
-      <div className="w-full flex gap-3">
-        {/* user image */}
-        {/* <div className="aspect-square h-12 rounded-full bg-slate-400 relative overflow-clip">
-          <Image
-            src={img}
-            alt={fullName}
-            placeholder="blur"
-            className="object-cover"
-          />
-        </div> */}
-        {/* user profile */}
-        <div>
-          <p>{fullName}</p>
-          <p className="text-xs">{role}</p>
-        </div>
+    <div className="grid gap-10 w-full max-w-xl mx-auto h-full p-5 text-black bg-slate-200 rounded-2xl shadow-xl">
+      <div>
+        <h3 className="font-bold">{fullName}</h3>
+        <p className="italic text-xs">{role}</p>
       </div>
-
-      {/* user review */}
-      <p className="italic text-xs">"{content}"</p>
+      <p className="text-xs lg:text-sm">&quot;{content}&quot;</p>
     </div>
   );
 }

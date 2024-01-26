@@ -267,12 +267,11 @@ export default function Home() {
           {/* Featured reviews */}
           <Carousel>
             {reviews?.map((review, idx) => (
-              <div key={idx} className="flex-[0_0_auto] max-w-full min-w-0">
+              <div key={idx} className="flex-[0_0_100%] pl-4 relative min-w-0">
                 <ReviewCard
                   content={review.content}
                   fullName={review.fullName}
                   role={review.role}
-                  img={review.img}
                 />
               </div>
             ))}
