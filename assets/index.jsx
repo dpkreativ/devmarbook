@@ -32,28 +32,30 @@ export const reviews = [
     role: 'Developer Marketing at Hubspot',
     content:
       'Great book to give some insights into the world of developer marketing. I wish I had it when I started.',
-    img: author,
   },
   {
     fullName: 'Richard Hurring',
     role: 'Founder & CEO at Catchy',
     content:
       "I like that you are using 'real' examples of companies and individuals to get your points across. I also like that you haven't fallen into the classic 'Developers hate marketing' trap.",
-    img: author,
   },
   {
     fullName: 'Candor Dennis',
     role: 'Developer Community Manager',
     content:
       'I recommend this read for anyone looking to build a community around a developer tool. It has firm insights into specific parts of Developer Marketing.',
-    img: author,
   },
   {
     fullName: 'Sophia Iroegbu',
     role: 'Developer Advocate',
     content:
       "This is one of the best and well written books about developer marketing and relations that I've read. It's a must read for one getting started in these fields and it's beginner friendly as well. A solid 10/10.",
-    img: author,
+  },
+  {
+    fullName: 'Divine Orji',
+    role: 'Software Engineer',
+    content:
+      "As a software engineer, I found Trust's book on developer marketing to be an invaluable resource. The practical insights provided have significantly enhanced my understanding of the dynamics between development and marketing.",
   },
 ];
 
