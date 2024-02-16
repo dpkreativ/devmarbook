@@ -55,11 +55,15 @@ export default function Home() {
 
         {/* Marketing content */}
         <div className="grid gap-5">
-          <AnimatedText
+          {/* <AnimatedText
             text={`The Developer Marketing Book`}
             el={`h1`}
             className="font-extrabold text-6xl lg:text-7xl drop-shadow-sm"
-          />
+          /> */}
+
+          <h1 className="font-extrabold text-6xl lg:text-7xl drop-shadow-sm">
+            The Developer Marketing Book
+          </h1>
 
           <h3 className="text-[#786937]">
             A comprehensive approach to reaching and engaging developers
