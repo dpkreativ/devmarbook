@@ -3,6 +3,7 @@ import './globals.css';
 import {
   AmazonIcon,
   BlogIcon,
+  GumroadIcon,
   LinkedInIcon,
   XTwitterIcon,
   book_link,
@@ -67,7 +68,18 @@ export default function RootLayout({ children }) {
                 rel="noopener noreferrer"
               >
                 <AmazonIcon />
-                <span>Buy on Amazon</span>
+                <span className="hidden md:block">Buy on Amazon</span>
+              </a>
+
+              {/* Gumroad */}
+              <a
+                href={`https://decenta.gumroad.com/l/devmarbook`}
+                className="flex gap-2 items-center"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <GumroadIcon />
+                <span className="hidden md:block">Buy on Gumroad</span>
               </a>
             </nav>
           </div>
@@ -79,7 +91,7 @@ export default function RootLayout({ children }) {
         {/* Footer */}
         <footer className="text-[#1F55A9]">
           <div className="w-full max-w-7xl px-5 py-10 mx-auto grid gap-10">
-            <nav className="flex gap-10 items-center justify-center text-center">
+            <nav className="grid gap-5 place-items-center md:gap-10 grid-cols-2 md:flex w-max mx-auto">
               <Link href="#whats-inside">What's inside?</Link>
               <Link href="#quick-preview">Quick preview</Link>
               <a
@@ -88,7 +100,15 @@ export default function RootLayout({ children }) {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Get the book
+                Amazon
+              </a>
+              <a
+                href={`https://decenta.gumroad.com/l/devmarbook`}
+                className="flex gap-2 items-center"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Gumroad
               </a>
             </nav>
             <div className="flex gap-10 items-center justify-center">

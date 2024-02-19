@@ -3,6 +3,7 @@ import {
   BookIcon,
   BookYouTubeTrailer,
   BulletIcon,
+  GumroadIcon,
   LinkedInIcon,
   MediumIcon,
   XTwitterIcon,
@@ -68,12 +69,24 @@ export default function Home() {
           <h3 className="text-[#786937]">
             A comprehensive approach to reaching and engaging developers
           </h3>
-          <a href={book_link} target="_blank" rel="noopener noreferrer">
-            <Button>
-              <AmazonIcon />
-              <div>Buy on Amazon</div>
-            </Button>
-          </a>
+          <div className="grid md:grid-cols-2 gap-5">
+            <a href={book_link} target="_blank" rel="noopener noreferrer">
+              <Button>
+                <AmazonIcon />
+                <div>Buy on Amazon</div>
+              </Button>
+            </a>
+            <a
+              href={`https://decenta.gumroad.com/l/devmarbook`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button>
+                <GumroadIcon />
+                <div>Buy on Gumroad</div>
+              </Button>
+            </a>
+          </div>
           <Link href="#quick-preview">
             <Button>
               <BookIcon />
@@ -151,20 +164,37 @@ export default function Home() {
             />
           </div>
 
-          {/* Get on Amazon */}
-          <a
-            href={book_link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="border-2 border-white rounded-full w-max mx-auto overflow-clip shadow-xl"
-          >
-            <Button>
-              <div className="animate-pulse">
-                <AmazonIcon />
-              </div>
-              <div>Get it on Amazon</div>
-            </Button>
-          </a>
+          <div className="grid gap-5 md:grid-cols-2 w-max mx-auto">
+            {/* Get on Amazon */}
+            <a
+              href={book_link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border-2 border-white rounded-full w-max mx-auto overflow-clip shadow-xl"
+            >
+              <Button>
+                <div className="animate-pulse">
+                  <AmazonIcon />
+                </div>
+                <div>Get it on Amazon</div>
+              </Button>
+            </a>
+
+            {/* Get on Gumroad */}
+            <a
+              href={`https://decenta.gumroad.com/l/devmarbook`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border-2 border-white rounded-full w-max mx-auto overflow-clip shadow-xl"
+            >
+              <Button>
+                <div className="animate-pulse">
+                  <GumroadIcon />
+                </div>
+                <div>Get it on Gumroad</div>
+              </Button>
+            </a>
+          </div>
         </div>
       </section>
 
