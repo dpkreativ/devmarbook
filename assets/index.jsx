@@ -1,8 +1,8 @@
-import book_front from './book-front-min.jpg';
-import book_back from './book-back-min.jpg';
-import book_spine from './book-spine-min.jpg';
-import author from './author.png';
-import book_dd from './dd.png';
+import book_front from "./book-front-min.jpg";
+import book_back from "./book-back-min.jpg";
+import book_spine from "./book-spine-min.jpg";
+import author from "./author.jpg";
+import book_dd from "./dd.png";
 
 // --- Images ---
 export { book_front, book_back, book_spine, author, book_dd };
@@ -23,37 +23,37 @@ export function BookYouTubeTrailer() {
 }
 
 // --- Book link ---
-export const book_link = 'https://a.co/d/hU4ZCYq';
+export const book_link = "https://a.co/d/hU4ZCYq";
 
 // --- Reviews ---
 export const reviews = [
   {
-    fullName: 'Sarah Mouton',
-    role: 'Developer Marketing at Hubspot',
+    fullName: "Sarah Mouton",
+    role: "Developer Marketing at Hubspot",
     content:
-      'Great book to give some insights into the world of developer marketing. I wish I had it when I started.',
+      "Great book to give some insights into the world of developer marketing. I wish I had it when I started.",
   },
   {
-    fullName: 'Richard Hurring',
-    role: 'Founder & CEO at Catchy',
+    fullName: "Richard Hurring",
+    role: "Founder & CEO at Catchy",
     content:
       "I like that you are using 'real' examples of companies and individuals to get your points across. I also like that you haven't fallen into the classic 'Developers hate marketing' trap.",
   },
   {
-    fullName: 'Candor Dennis',
-    role: 'Developer Community Manager',
+    fullName: "Candor Dennis",
+    role: "Developer Community Manager",
     content:
-      'I recommend this read for anyone looking to build a community around a developer tool. It has firm insights into specific parts of Developer Marketing.',
+      "I recommend this read for anyone looking to build a community around a developer tool. It has firm insights into specific parts of Developer Marketing.",
   },
   {
-    fullName: 'Sophia Iroegbu',
-    role: 'Developer Advocate',
+    fullName: "Sophia Iroegbu",
+    role: "Developer Advocate",
     content:
       "This is one of the best and well written books about developer marketing and relations that I've read. It's a must read for one getting started in these fields and it's beginner friendly as well. A solid 10/10.",
   },
   {
-    fullName: 'Divine Orji',
-    role: 'Software Engineer',
+    fullName: "Divine Orji",
+    role: "Software Engineer",
     content:
       "As a software engineer, I found Trust's book on developer marketing to be an invaluable resource. The practical insights provided have significantly enhanced my understanding of the dynamics between development and marketing.",
   },

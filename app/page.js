@@ -14,97 +14,95 @@ import {
   book_link,
   book_spine,
   reviews,
-} from '@/assets';
-import AnimatedText from '@/components/animated-text';
-import Button from '@/components/button';
-import { ReviewCard } from '@/components/card';
-import Carousel from '@/components/carousel';
-import Newsletter from '@/components/newsletter';
-import Image from 'next/image';
-import Link from 'next/link';
+} from "@/assets";
+// import AnimatedText from "@/components/animated-text";
+import Button from "@/components/button";
+import { ReviewCard } from "@/components/card";
+import Carousel from "@/components/carousel";
+import Newsletter from "@/components/newsletter";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main>
-      {/* Hero */}
-      <section className="grid md:grid-cols-2 gap-10 md:gap-20 items-center px-5 pt-10 pb-24 w-full max-w-5xl mx-auto">
-        {/* Images */}
-        <div className="aspect-square relative">
-          <div className="aspect-[5/7] w-4/6 absolute bottom-0 left-0 rounded-xl overflow-clip shadow-xl border-r border-[#FCC002]">
-            <div className="w-full h-full relative">
-              <Image
-                src={book_back}
-                alt="Developer marketing back cover"
-                className="object-cover"
-                priority
-                placeholder="blur"
-              />
+    <main className="min-h-[70vh]">
+      {/* Hero Section */}
+      <section className="min-h-[600px] pt-20 pb-64">
+        <div className="p-5 w-full max-w-7xl mx-auto flex flex-col items-center justify-center gap-10">
+          <h1 className="text-4xl md:text-5xl w-full max-w-3xl mx-auto font-extrabold grid gap-3">
+            <span>The</span>
+            <div className="text-5xl md:text-6xl lg:text-7xl leading-snug text-[--primary-color] text-center">
+              Developer Marketing
             </div>
-          </div>
-          <div className="aspect-[5/7] w-4/6 absolute top-0 right-0 rounded-xl overflow-clip shadow-xl border-r-2 border-[#348576]">
-            <div className="w-full h-full relative">
-              <Image
-                src={book_front}
-                alt="Developer marketing front cover"
-                className="object-cover"
-                priority
-                placeholder="blur"
-              />
-            </div>
-          </div>
-        </div>
-
-        {/* Marketing content */}
-        <div className="grid gap-5">
-          {/* <AnimatedText
-            text={`The Developer Marketing Book`}
-            el={`h1`}
-            className="font-extrabold text-6xl lg:text-7xl drop-shadow-sm"
-          /> */}
-
-          <h1 className="font-extrabold text-6xl lg:text-7xl drop-shadow-sm">
-            The Developer Marketing Book
+            <span className="ml-auto">Book</span>
           </h1>
-
-          <h3 className="text-[#786937]">
+          <h3 className="text-lg text-center">
             A comprehensive approach to reaching and engaging developers
           </h3>
-          <div className="grid md:grid-cols-2 gap-5">
-            <a href={book_link} target="_blank" rel="noopener noreferrer">
-              <Button>
-                <AmazonIcon />
-                <div>Buy on Amazon</div>
-              </Button>
-            </a>
-            <a
-              href={`https://decenta.gumroad.com/l/devmarbook`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button>
-                <GumroadIcon />
-                <div>Buy on Gumroad</div>
-              </Button>
-            </a>
-          </div>
-          <Link href="#quick-preview">
-            <Button>
-              <BookIcon />
-              <div>Read a free chapter</div>
+        </div>
+
+        <div className="p-5 max-w-3xl mx-auto flex flex-col md:flex-row gap-5 justify-center items-center">
+          <a href={book_link} target="_blank" rel="noopener noreferrer">
+            <Button secondary>
+              <AmazonIcon />
+              <div>Buy on Amazon</div>
             </Button>
-          </Link>
+          </a>
+
+          <a href={book_link} target="_blank" rel="noopener noreferrer">
+            <Button>
+              <AmazonIcon />
+              <div>Get on Audible</div>
+            </Button>
+          </a>
         </div>
       </section>
 
-      {/* Features */}
-      <section id="whats-inside" className="bg-[#1F55A9] text-white">
-        <div className="px-5 py-24 w-full max-w-5xl mx-auto grid gap-10">
+      {/* Book display section */}
+      <section className="bg-[--grey-accent]">
+        <div className="p-5 py-20 w-full max-w-7xl mx-auto grid place-items-center gap-10">
+          {/* Book image */}
+          <div className="aspect-[9/12] shadow-lg w-full max-w-md bg-[--primary-color] -mt-64 relative rounded-r-2xl overflow-hidden">
+            <Image src={book_front} alt="Book Front" layout="fill" />
+          </div>
+
+          <div className="w-full max-w-5xl mx-auto grid gap-10">
+            <h2 className="text-xl md:text-3xl font-light text-center">
+              Reviews
+            </h2>
+
+            {/* Featured reviews */}
+            <Carousel>
+              {reviews?.map((review, idx) => (
+                <div
+                  key={idx}
+                  className="flex-[0_0_100%] pl-4 relative min-w-0"
+                >
+                  <ReviewCard
+                    content={review.content}
+                    fullName={review.fullName}
+                    role={review.role}
+                  />
+                </div>
+              ))}
+            </Carousel>
+          </div>
+        </div>
+
+        <div
+          className="px-5 w-full max-w-5xl mx-auto grid gap-10"
+          id="whats-inside"
+        >
           {/* Section header */}
-          <AnimatedText
+          {/* <AnimatedText
             text={`What's inside?`}
             el={`h2`}
             className="text-3xl md:text-5xl font-light text-center md:text-left"
-          />
+          /> */}
+
+          <h2 className="text-3xl md:text-5xl font-light text-center">
+            What's inside?
+          </h2>
 
           {/* Feature video */}
           <div className="aspect-video overflow-clip w-full max-w-3xl mx-auto bg-slate-200 rounded-2xl shadow-2xl">
@@ -112,59 +110,41 @@ export default function Home() {
           </div>
 
           {/* Feature texts */}
-          <div className="w-full max-w-2xl mx-auto grid gap-10 py-5">
+          <div className="w-full max-w-2xl mx-auto grid gap-10 py-5 text-center">
             {/* Feature text */}
-            <div className="flex gap-3">
-              <BulletIcon />
-              <div className="grid gap-2">
-                <h3 className="text-xl lg:text-3xl font-bold">
-                  Developer Marketing Strategies
-                </h3>
-                <p>
-                  Insightful tips on different strategies for effectively
-                  marketing to developers.
-                </p>
-              </div>
+            <div className="grid gap-2">
+              <h3 className="text-xl lg:text-3xl font-bold">
+                Developer Marketing Strategies
+              </h3>
+              <p>
+                Insightful tips on different strategies for effectively
+                marketing to developers.
+              </p>
             </div>
 
             {/* Feature text */}
-            <div className="flex gap-3">
-              <BulletIcon />
-              <div className="grid gap-2">
-                <h3 className="text-xl lg:text-3xl font-bold">
-                  Community Building
-                </h3>
-                <p>
-                  Leveraging the power of community to interact with developers.
-                </p>
-              </div>
+            <div className="grid gap-2">
+              <h3 className="text-xl lg:text-3xl font-bold">
+                Community Building
+              </h3>
+              <p>
+                Leveraging the power of community to interact with developers.
+              </p>
             </div>
 
             {/* Feature text */}
-            <div className="flex gap-3">
-              <BulletIcon />
-              <div className="grid gap-2">
-                <h3 className="text-xl lg:text-3xl font-bold">
-                  Partnerships and Influencer Marketing
-                </h3>
-                <p>
-                  Connecting with the right people to forge stronger developer
-                  engagement.
-                </p>
-              </div>
+            <div className="grid gap-2">
+              <h3 className="text-xl lg:text-3xl font-bold">
+                Partnerships and Influencer Marketing
+              </h3>
+              <p>
+                Connecting with the right people to forge stronger developer
+                engagement.
+              </p>
             </div>
           </div>
 
-          {/* Feature image */}
-          <div className="w-full max-w-sm mx-auto aspect-square relative drop-shadow-md">
-            <Image
-              src={book_dd}
-              alt="Developer marketing book mockup"
-              className="object-contain"
-            />
-          </div>
-
-          <div className="grid gap-5 md:grid-cols-2 w-max mx-auto">
+          <div className="grid gap-5 md:grid-cols-2 w-max mx-auto -mb-5">
             {/* Get on Amazon */}
             <a
               href={book_link}
@@ -180,18 +160,18 @@ export default function Home() {
               </Button>
             </a>
 
-            {/* Get on Gumroad */}
+            {/* Get on Audible */}
             <a
-              href={`https://decenta.gumroad.com/l/devmarbook`}
+              href={`/`}
               target="_blank"
               rel="noopener noreferrer"
               className="border-2 border-white rounded-full w-max mx-auto overflow-clip shadow-xl"
             >
-              <Button>
+              <Button secondary>
                 <div className="animate-pulse">
                   <GumroadIcon />
                 </div>
-                <div>Get it on Gumroad</div>
+                <div>Listen on Audible</div>
               </Button>
             </a>
           </div>
@@ -199,64 +179,77 @@ export default function Home() {
       </section>
 
       {/* About the author */}
-      <section className="grid md:grid-cols-2 gap-10 md:gap-20 items-center px-5 py-24 w-full max-w-5xl mx-auto">
-        <div className="grid gap-10 text-center md:text-left">
+      <section className="grid md:grid-cols-3 gap-10 md:gap-20 px-5 py-24 pt-40 w-full max-w-5xl mx-auto">
+        <h2 className="text-3xl md:text-5xl md:col-span-3 font-light text-[--secondary-color] text-center">
+          About the author
+        </h2>
+
+        <div className="grid gap-10 text-center md:text-left md:col-span-1">
           {/* Section header */}
-          <AnimatedText
+          {/* <AnimatedText
             text={`About the author`}
             el={`h2`}
             className="text-3xl md:text-5xl font-light text-[#786937]"
-          />
+          /> */}
 
-          {/* Author bio */}
-          <div className="grid gap-5">
-            <p>
-              Trust Onyekwere is a Developer Relations Expert with over five
-              years of experience building developer communities, driving
-              product adoption, and leading technical outreach programs.
-            </p>
-            <p>
-              His expertise and insights will be unveiled in his book -
-              Developer Marketing, empowering aspiring and experienced DevRel
-              professionals alike.
-            </p>
-          </div>
+          <div className="grid gap-10">
+            {/* Author image */}
+            <div className="aspect-square relative rounded-2xl overflow-clip">
+              <Image
+                src={author}
+                alt="Trust Onyekwere"
+                className="object-cover"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
+            </div>
 
-          {/* Author socials */}
-          <div className="flex gap-10 justify-center md:justify-normal items-center">
-            <a
-              href="https://twitter.com/iamtjah"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <XTwitterIcon />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/trust-onyekwere/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <LinkedInIcon />
-            </a>
-            <a
-              href="https://medium.com/@tjah"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <MediumIcon />
-            </a>
+            {/* Author socials */}
+            <div className="flex gap-10 justify-center items-center">
+              <a
+                href="https://twitter.com/iamtjah"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <XTwitterIcon />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/trust-onyekwere/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <LinkedInIcon />
+              </a>
+              <a
+                href="https://medium.com/@tjah"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <MediumIcon />
+              </a>
+            </div>
           </div>
         </div>
 
-        {/* Author image */}
-        <div className="aspect-square relative rounded-2xl overflow-clip">
-          <Image
-            src={author}
-            alt="Trust Onyekwere"
-            className="object-cover"
-            fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          />
+        {/* Author bio */}
+        <div className="grid gap-5 h-max md:col-span-2 text-center md:text-left">
+          <p>
+            Trust Onyekwere is a Developer Relations Expert with over six years
+            of experience in building developer communities, driving product
+            adoption, and leading technical outreach programs.
+          </p>
+          <p>
+            He is a founding and advisory board member of the Developer
+            Marketing Alliance. Trust has collaborated with renowned brands such
+            as Andela, Google Developer Groups, Bunzz, Udacity, RAD5 Tech Hub,
+            and many others to design and implement impactful programs for
+            developers.
+          </p>
+          <p>
+            As a former developer, Trust brings a unique perspective that allows
+            him to understand the needs and challenges of reaching and engaging
+            developers.
+          </p>
         </div>
       </section>
 
@@ -266,15 +259,19 @@ export default function Home() {
         className="px-5 py-24 w-full max-w-5xl mx-auto grid gap-10"
       >
         {/* CTA */}
-        <AnimatedText
+        {/* <AnimatedText
           text={`Quick preview`}
           el={`h2`}
           className="text-3xl md:text-5xl text-center md:text-left font-light text-[#786937]"
-        />
+        /> */}
+
+        <h2 className="text-3xl md:text-5xl text-center font-light text-[--primary-color]">
+          Take a peek
+        </h2>
 
         <div className="flex gap-5 md:gap-10 items-center w-full max-w-3xl mx-auto">
           {/* Book spine */}
-          <div className="relative w-5 md:w-10 h-full rounded-full overflow-clip shadow-xl bg-[#786937]">
+          <div className="relative w-5 md:w-10 h-full rounded-full overflow-clip shadow-xl bg-[--primary-color]">
             <Image
               src={book_spine}
               alt="Developer Marketing"
@@ -285,31 +282,6 @@ export default function Home() {
 
           {/* newsletter form */}
           <Newsletter />
-        </div>
-      </section>
-
-      {/* Reviews */}
-      <section className="bg-[#1F55A9] text-white">
-        <div className="px-5 py-24 w-full max-w-5xl mx-auto grid gap-10">
-          {/* Section header */}
-          <AnimatedText
-            text={`Reviews so far...`}
-            el={`h2`}
-            className="text-3xl md:text-5xl font-light text-center md:text-left"
-          />
-
-          {/* Featured reviews */}
-          <Carousel>
-            {reviews?.map((review, idx) => (
-              <div key={idx} className="flex-[0_0_100%] pl-4 relative min-w-0">
-                <ReviewCard
-                  content={review.content}
-                  fullName={review.fullName}
-                  role={review.role}
-                />
-              </div>
-            ))}
-          </Carousel>
         </div>
       </section>
     </main>

@@ -1,15 +1,15 @@
-'use client';
-import { useFormState, useFormStatus } from 'react-dom';
-import { BookIcon, SpinnerIcon } from '@/assets';
-import Button from './button';
-import Input from './input';
-import AnimatedText from './animated-text';
-import { saveToConvertkit } from '@/lib/actions';
+"use client";
+import { useFormState, useFormStatus } from "react-dom";
+import { BookIcon, SpinnerIcon } from "@/assets";
+import Button from "./button";
+import Input from "./input";
+import AnimatedText from "./animated-text";
+import { saveToConvertkit } from "@/lib/actions";
 
 export default function Newsletter() {
   const [state, formAction] = useFormState(saveToConvertkit, {});
 
-  return state?.message === 'successful' ? (
+  return state?.message === "successful" ? (
     <div className="grid gap-5">
       <AnimatedText
         text={`Successful!`}
@@ -42,7 +42,7 @@ function Submit() {
   const { pending } = useFormStatus();
 
   return (
-    <Button type="submit" disabled={pending}>
+    <Button secondary type="submit" disabled={pending}>
       {pending ? (
         <>
           <SpinnerIcon />

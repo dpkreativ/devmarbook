@@ -1,5 +1,5 @@
-import { Inter } from 'next/font/google';
-import './globals.css';
+import { Inter } from "next/font/google";
+import "./globals.css";
 import {
   AmazonIcon,
   BlogIcon,
@@ -7,17 +7,18 @@ import {
   LinkedInIcon,
   XTwitterIcon,
   book_link,
-} from '@/assets';
-import Link from 'next/link';
-import { WebVitals } from '@/components/web-vitals';
-import Script from 'next/script';
+} from "@/assets";
+import Link from "next/link";
+import { WebVitals } from "@/components/web-vitals";
+import Script from "next/script";
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: 'The Developer Marketing Book',
-  description: 'A comprehensive approach to reaching and engaging developers',
-  metadataBase: new URL('https://devmarbook.com'),
+  title: "The Developer Marketing Book",
+  description:
+    "A comprehensive approach to reaching and engaging developers - Audiobook",
+  metadataBase: new URL("https://devmarbook.com"),
 };
 
 const GTAG_ID = process.env.GTAG_ID;
@@ -25,7 +26,7 @@ const GTAG_ID = process.env.GTAG_ID;
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} bg-[#EFEFEF]`}>
+      <body className={`${inter.className} bg-[#FFF] text-[--dark-tone]`}>
         {/* Analytics */}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GTAG_ID}`}
@@ -42,8 +43,8 @@ export default function RootLayout({ children }) {
         <WebVitals />
 
         {/* Header */}
-        <header className="sticky top-0 z-10 px-3 py-5 bg-gradient-to-b from-[#1F55A9]/10">
-          <div className="bg-[#EFEFEF] text-[#1F55A9] rounded-full p-5 w-full max-w-7xl mx-auto flex justify-between items-center">
+        <header className="sticky top-0 z-10 px-3 py-5">
+          <div className="bg-[--background-color] border border-[--grey-accent] rounded-full p-5 w-full max-w-7xl mx-auto flex justify-between items-center">
             <a
               href="https://blog.devmarbook.com"
               className="flex gap-2 items-center"
@@ -72,7 +73,7 @@ export default function RootLayout({ children }) {
               </a>
 
               {/* Gumroad */}
-              <a
+              {/* <a
                 href={`https://decenta.gumroad.com/l/devmarbook`}
                 className="flex gap-2 items-center"
                 target="_blank"
@@ -80,7 +81,7 @@ export default function RootLayout({ children }) {
               >
                 <GumroadIcon />
                 <span className="hidden md:block">Buy on Gumroad</span>
-              </a>
+              </a> */}
             </nav>
           </div>
         </header>
@@ -89,27 +90,22 @@ export default function RootLayout({ children }) {
         {children}
 
         {/* Footer */}
-        <footer className="text-[#1F55A9]">
+        <footer className="bg-[--primary-color] text-white">
           <div className="w-full max-w-7xl px-5 py-10 mx-auto grid gap-10">
-            <nav className="grid gap-5 place-items-center md:gap-10 grid-cols-2 md:flex w-max mx-auto">
+            <nav className="flex flex-col text-center lg:flex-row gap-5 md:gap-10 w-max mx-auto">
               <Link href="#whats-inside">What's inside?</Link>
               <Link href="#quick-preview">Quick preview</Link>
-              <a
-                href={book_link}
-                className="flex gap-2 items-center"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href={book_link} target="_blank" rel="noopener noreferrer">
                 Amazon
               </a>
-              <a
+              {/* <a
                 href={`https://decenta.gumroad.com/l/devmarbook`}
                 className="flex gap-2 items-center"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Gumroad
-              </a>
+              </a> */}
             </nav>
             <div className="flex gap-10 items-center justify-center">
               <a

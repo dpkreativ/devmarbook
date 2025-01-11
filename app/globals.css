@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --dark-tone: #1a1919;
+  --primary-color: #1b5996;
+  --secondary-color: #919046;
+  --background-color: #ffffff;
+  --grey-accent: #f0f4f8;
+  --primary-accent: #a8beda;
+}
+
 .backface-visible {
-  backface-visibility: 'visible';
+  backface-visibility: "visible";
 }
