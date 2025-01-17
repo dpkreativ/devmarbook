@@ -60,11 +60,9 @@ export default function Home() {
             className="font-extrabold text-6xl lg:text-7xl drop-shadow-sm"
           /> */}
 
-          <h1 className="font-extrabold text-5xl md:text-6xl lg:text-7xl drop-shadow-sm text-[--primary-color]">
+          <h1 className="font-extrabold text-[clamp(3rem,5vw,4rem)] leading-tight drop-shadow-sm text-[--primary-color]">
             <span>The</span>
-            <div className="text-5xl md:text-6xl lg:text-7xl leading-snug">
-              Developer Marketing
-            </div>
+            <div>Developer Marketing</div>
             <span>Book</span>
           </h1>
 
@@ -95,7 +93,7 @@ export default function Home() {
       </section>
 
       {/* Book display section */}
-      <section>
+      <section className="bg-[--primary-color] text-white">
         <div className="p-5 py-20 w-full max-w-7xl mx-auto grid place-items-center gap-10">
           <div className="w-full max-w-5xl mx-auto grid gap-10">
             <h2 className="text-xl md:text-3xl font-light text-center">

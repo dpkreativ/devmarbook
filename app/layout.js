@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import {
   AmazonIcon,
+  AudibleIcon,
   BlogIcon,
   GumroadIcon,
   LinkedInIcon,
@@ -82,6 +83,15 @@ export default function RootLayout({ children }) {
               >
                 <AmazonIcon />
                 <span className="hidden md:block">Get E-book</span>
+              </a>
+              <a
+                href={book_link}
+                className="flex gap-2 items-center hover:text-[--secondary-color]"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <AudibleIcon />
+                <div className="hidden md:block">Listen to Audio</div>
               </a>
 
               {/* Gumroad */}
