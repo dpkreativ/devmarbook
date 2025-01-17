@@ -28,7 +28,7 @@ export default function Home() {
       <section className="grid md:grid-cols-2 gap-10 md:gap-20 items-center px-5 pt-10 pb-24 w-full max-w-5xl mx-auto">
         {/* Images */}
         <div className="aspect-square relative">
-          <div className="aspect-[5/7] w-4/6 absolute bottom-0 left-0 rounded-xl overflow-clip shadow-xl border-r border-[#FCC002]">
+          <div className="aspect-[5/7] w-4/6 absolute bottom-0 left-0 rounded-xl overflow-clip shadow-xl shadow-[--secondary-color] border-r border-[--primary-accent]">
             <div className="w-full h-full relative">
               <Image
                 src={book_back}
@@ -39,7 +39,7 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className="aspect-[5/7] w-4/6 absolute top-0 right-0 rounded-xl overflow-clip shadow-xl border-r-2 border-[#348576]">
+          <div className="aspect-[5/7] w-4/6 absolute top-0 right-0 rounded-xl overflow-clip shadow-xl shadow-[--primary-color] border-r-2 border-[--primary-accent]">
             <div className="w-full h-full relative">
               <Image
                 src={book_front}
@@ -60,15 +60,15 @@ export default function Home() {
             className="font-extrabold text-6xl lg:text-7xl drop-shadow-sm"
           /> */}
 
-          <h1 className="font-extrabold text-5xl md:text-6xl lg:text-7xl drop-shadow-sm text-[--secondary-color]">
+          <h1 className="font-extrabold text-5xl md:text-6xl lg:text-7xl drop-shadow-sm text-[--primary-color]">
             <span>The</span>
-            <div className="text-5xl md:text-6xl lg:text-7xl leading-snug text-[--primary-color]">
+            <div className="text-5xl md:text-6xl lg:text-7xl leading-snug">
               Developer Marketing
             </div>
             <span>Book</span>
           </h1>
 
-          <h3 className="text-[#786937]">
+          <h3 className="drop-shadow-sm">
             A comprehensive approach to reaching and engaging developers
           </h3>
           <div className="grid md:grid-cols-2 gap-5">
@@ -78,28 +78,24 @@ export default function Home() {
                 <div>Get E-book</div>
               </Button>
             </a>
-            <a
-              href={`https://decenta.gumroad.com/l/devmarbook`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={`/`} target="_blank" rel="noopener noreferrer">
               <Button>
                 <AudibleIcon />
                 <div>Listen to Audio</div>
               </Button>
             </a>
           </div>
-          <Link href="#quick-preview">
+          {/* <Link href="#quick-preview">
             <Button secondary>
               <BookIcon />
               <div>Read a free chapter</div>
             </Button>
-          </Link>
+          </Link> */}
         </div>
       </section>
 
       {/* Book display section */}
-      <section className="bg-[--grey-accent]">
+      <section>
         <div className="p-5 py-20 w-full max-w-7xl mx-auto grid place-items-center gap-10">
           <div className="w-full max-w-5xl mx-auto grid gap-10">
             <h2 className="text-xl md:text-3xl font-light text-center">

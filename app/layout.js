@@ -50,7 +50,7 @@ export default function RootLayout({ children }) {
 
         {/* Header */}
         <header className="sticky top-0 z-10 px-3 py-5">
-          <div className="bg-[--background-color] border border-[--primary-color] hover:border-[--secondary-color] text-[--primary-color] rounded-full p-5 w-full max-w-7xl mx-auto flex justify-between items-center">
+          <div className="bg-[--background-color] border border-[--grey-accent] hover:border-[--primary-accent] text-[--primary-color] rounded-2xl p-5 w-full max-w-7xl mx-auto flex justify-between items-center">
             <a
               href="https://blog.devmarbook.com"
               className="flex gap-2 items-center hover:text-[--secondary-color]"
