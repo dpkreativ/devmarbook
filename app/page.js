@@ -1,15 +1,13 @@
 import {
   AmazonIcon,
+  AudibleIcon,
   BookIcon,
   BookYouTubeTrailer,
-  BulletIcon,
-  GumroadIcon,
   LinkedInIcon,
   MediumIcon,
   XTwitterIcon,
   author,
   book_back,
-  book_dd,
   book_front,
   book_link,
   book_spine,
@@ -26,46 +24,83 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main className="min-h-[70vh]">
-      {/* Hero Section */}
-      <section className="min-h-[600px] pt-20 pb-64">
-        <div className="p-5 w-full max-w-7xl mx-auto flex flex-col items-center justify-center gap-10">
-          <h1 className="text-4xl md:text-5xl w-full max-w-3xl mx-auto font-extrabold grid gap-3">
-            <span>The</span>
-            <div className="text-5xl md:text-6xl lg:text-7xl leading-snug text-[--primary-color] text-center">
-              Developer Marketing
+      {/* Hero */}
+      <section className="grid md:grid-cols-2 gap-10 md:gap-20 items-center px-5 pt-10 pb-24 w-full max-w-5xl mx-auto">
+        {/* Images */}
+        <div className="aspect-square relative">
+          <div className="aspect-[5/7] w-4/6 absolute bottom-0 left-0 rounded-xl overflow-clip shadow-xl border-r border-[#FCC002]">
+            <div className="w-full h-full relative">
+              <Image
+                src={book_back}
+                alt="Developer marketing back cover"
+                className="object-cover"
+                priority
+                placeholder="blur"
+              />
             </div>
-            <span className="ml-auto">Book</span>
-          </h1>
-          <h3 className="text-lg text-center">
-            A comprehensive approach to reaching and engaging developers
-          </h3>
+          </div>
+          <div className="aspect-[5/7] w-4/6 absolute top-0 right-0 rounded-xl overflow-clip shadow-xl border-r-2 border-[#348576]">
+            <div className="w-full h-full relative">
+              <Image
+                src={book_front}
+                alt="Developer marketing front cover"
+                className="object-cover"
+                priority
+                placeholder="blur"
+              />
+            </div>
+          </div>
         </div>
 
-        <div className="p-5 max-w-3xl mx-auto flex flex-col md:flex-row gap-5 justify-center items-center">
-          <a href={book_link} target="_blank" rel="noopener noreferrer">
-            <Button secondary>
-              <AmazonIcon />
-              <div>Buy on Amazon</div>
-            </Button>
-          </a>
+        {/* Marketing content */}
+        <div className="grid gap-5">
+          {/* <AnimatedText
+            text={`The Developer Marketing Book`}
+            el={`h1`}
+            className="font-extrabold text-6xl lg:text-7xl drop-shadow-sm"
+          /> */}
 
-          <a href={book_link} target="_blank" rel="noopener noreferrer">
-            <Button>
-              <AmazonIcon />
-              <div>Get on Audible</div>
+          <h1 className="font-extrabold text-5xl md:text-6xl lg:text-7xl drop-shadow-sm text-[--secondary-color]">
+            <span>The</span>
+            <div className="text-5xl md:text-6xl lg:text-7xl leading-snug text-[--primary-color]">
+              Developer Marketing
+            </div>
+            <span>Book</span>
+          </h1>
+
+          <h3 className="text-[#786937]">
+            A comprehensive approach to reaching and engaging developers
+          </h3>
+          <div className="grid md:grid-cols-2 gap-5">
+            <a href={book_link} target="_blank" rel="noopener noreferrer">
+              <Button>
+                <AmazonIcon />
+                <div>Get E-book</div>
+              </Button>
+            </a>
+            <a
+              href={`https://decenta.gumroad.com/l/devmarbook`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button>
+                <AudibleIcon />
+                <div>Listen to Audio</div>
+              </Button>
+            </a>
+          </div>
+          <Link href="#quick-preview">
+            <Button secondary>
+              <BookIcon />
+              <div>Read a free chapter</div>
             </Button>
-          </a>
+          </Link>
         </div>
       </section>
 
       {/* Book display section */}
       <section className="bg-[--grey-accent]">
         <div className="p-5 py-20 w-full max-w-7xl mx-auto grid place-items-center gap-10">
-          {/* Book image */}
-          <div className="aspect-[9/12] shadow-lg w-full max-w-md bg-[--primary-color] -mt-64 relative rounded-r-2xl overflow-hidden">
-            <Image src={book_front} alt="Book Front" layout="fill" />
-          </div>
-
           <div className="w-full max-w-5xl mx-auto grid gap-10">
             <h2 className="text-xl md:text-3xl font-light text-center">
               Reviews
@@ -169,7 +204,7 @@ export default function Home() {
             >
               <Button secondary>
                 <div className="animate-pulse">
-                  <GumroadIcon />
+                  <AudibleIcon />
                 </div>
                 <div>Listen on Audible</div>
               </Button>

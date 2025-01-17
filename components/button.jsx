@@ -10,7 +10,7 @@ export default function Button({
       disabled={disabled}
       className={`py-3 px-5 ${
         secondary ? "bg-[--secondary-color]" : "bg-[--primary-color]"
-      } text-white rounded-xl flex justify-center items-center gap-3`}
+      } text-white rounded-xl flex justify-center items-center gap-3 w-full`}
     >
       {children}
     </button>

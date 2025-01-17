@@ -26,6 +26,12 @@ const GTAG_ID = process.env.GTAG_ID;
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <link
+          href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+          rel="stylesheet"
+        />
+      </head>
       <body className={`${inter.className} bg-[#FFF] text-[--dark-tone]`}>
         {/* Analytics */}
         <Script
@@ -44,32 +50,38 @@ export default function RootLayout({ children }) {
 
         {/* Header */}
         <header className="sticky top-0 z-10 px-3 py-5">
-          <div className="bg-[--background-color] border border-[--grey-accent] rounded-full p-5 w-full max-w-7xl mx-auto flex justify-between items-center">
+          <div className="bg-[--background-color] border border-[--primary-color] hover:border-[--secondary-color] text-[--primary-color] rounded-full p-5 w-full max-w-7xl mx-auto flex justify-between items-center">
             <a
               href="https://blog.devmarbook.com"
-              className="flex gap-2 items-center"
+              className="flex gap-2 items-center hover:text-[--secondary-color]"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <BlogIcon />
+              <i class="ri-file-list-3-line"></i>
               <span>Blog</span>
             </a>
 
             <nav className="flex gap-10 items-center justify-center text-center">
-              <Link href="#whats-inside" className="hidden md:block">
+              <Link
+                href="#whats-inside"
+                className="hidden md:block hover:text-[--secondary-color]"
+              >
                 What's inside?
               </Link>
-              <Link href="#quick-preview" className="hidden md:block">
+              <Link
+                href="#quick-preview"
+                className="hidden md:block hover:text-[--secondary-color]"
+              >
                 Quick preview
               </Link>
               <a
                 href={book_link}
-                className="flex gap-2 items-center"
+                className="flex gap-2 items-center hover:text-[--secondary-color]"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <AmazonIcon />
-                <span className="hidden md:block">Buy on Amazon</span>
+                <span className="hidden md:block">Get E-book</span>
               </a>
 
               {/* Gumroad */}
