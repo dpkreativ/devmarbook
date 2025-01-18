@@ -9,7 +9,7 @@ import {
   author,
   book_back,
   book_front,
-  book_link,
+  ebook_link,
   book_spine,
   reviews,
 } from "@/assets";
@@ -70,7 +70,7 @@ export default function Home() {
             A comprehensive approach to reaching and engaging developers
           </h3>
           <div className="grid md:grid-cols-2 gap-5">
-            <a href={book_link} target="_blank" rel="noopener noreferrer">
+            <a href={ebook_link} target="_blank" rel="noopener noreferrer">
               <Button>
                 <AmazonIcon />
                 <div>Get E-book</div>
@@ -176,7 +176,7 @@ export default function Home() {
           <div className="grid gap-5 md:grid-cols-2 w-max mx-auto -mb-5">
             {/* Get on Amazon */}
             <a
-              href={book_link}
+              href={ebook_link}
               target="_blank"
               rel="noopener noreferrer"
               className="border-2 border-white rounded-full w-max mx-auto overflow-clip shadow-xl"

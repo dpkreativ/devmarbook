@@ -1,17 +1,10 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import {
-  AmazonIcon,
-  AudibleIcon,
-  BlogIcon,
-  GumroadIcon,
-  LinkedInIcon,
-  XTwitterIcon,
-  book_link,
-} from "@/assets";
+import { BlogIcon, LinkedInIcon, XTwitterIcon, ebook_link } from "@/assets";
 import Link from "next/link";
 import { WebVitals } from "@/components/web-vitals";
 import Script from "next/script";
+import Header from "@/components/header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -50,63 +43,7 @@ export default function RootLayout({ children }) {
         <WebVitals />
 
         {/* Header */}
-        <header className="sticky top-0 z-10 px-3 py-5">
-          <div className="bg-[--background-color] border border-[--grey-accent] hover:border-[--primary-accent] text-[--primary-color] rounded-2xl p-5 w-full max-w-7xl mx-auto flex justify-between items-center">
-            <a
-              href="https://blog.devmarbook.com"
-              className="flex gap-2 items-center hover:text-[--secondary-color]"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i class="ri-file-list-3-line"></i>
-              <span>Blog</span>
-            </a>
-
-            <nav className="flex gap-10 items-center justify-center text-center">
-              <Link
-                href="#whats-inside"
-                className="hidden md:block hover:text-[--secondary-color]"
-              >
-                What's inside?
-              </Link>
-              <Link
-                href="#quick-preview"
-                className="hidden md:block hover:text-[--secondary-color]"
-              >
-                Quick preview
-              </Link>
-              <a
-                href={book_link}
-                className="flex gap-2 items-center hover:text-[--secondary-color]"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <AmazonIcon />
-                <span className="hidden md:block">Get E-book</span>
-              </a>
-              <a
-                href={book_link}
-                className="flex gap-2 items-center hover:text-[--secondary-color]"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <AudibleIcon />
-                <div className="hidden md:block">Listen to Audio</div>
-              </a>
-
-              {/* Gumroad */}
-              {/* <a
-                href={`https://decenta.gumroad.com/l/devmarbook`}
-                className="flex gap-2 items-center"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <GumroadIcon />
-                <span className="hidden md:block">Buy on Gumroad</span>
-              </a> */}
-            </nav>
-          </div>
-        </header>
+        <Header />
 
         {/* Main content */}
         {children}
@@ -117,7 +54,7 @@ export default function RootLayout({ children }) {
             <nav className="flex flex-col text-center lg:flex-row gap-5 md:gap-10 w-max mx-auto">
               <Link href="#whats-inside">What's inside?</Link>
               <Link href="#quick-preview">Quick preview</Link>
-              <a href={book_link} target="_blank" rel="noopener noreferrer">
+              <a href={ebook_link} target="_blank" rel="noopener noreferrer">
                 Amazon
               </a>
               {/* <a

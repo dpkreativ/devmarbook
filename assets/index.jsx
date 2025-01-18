@@ -22,8 +22,9 @@ export function BookYouTubeTrailer() {
   );
 }
 
-// --- Book link ---
-export const book_link = "https://a.co/d/hU4ZCYq";
+// --- Book links ---
+export const ebook_link = "https://a.co/d/hU4ZCYq";
+export const audio_link = "https://a.co/d/hU4ZCYq";
 
 // --- Reviews ---
 export const reviews = [
