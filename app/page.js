@@ -22,13 +22,12 @@ import { ReviewCard } from "@/components/card";
 import Carousel from "@/components/carousel";
 import Newsletter from "@/components/newsletter";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function Home() {
   return (
     <main className="min-h-[70vh]">
       {/* Hero */}
-      <section className="grid md:grid-cols-2 gap-10 md:gap-20 items-center px-5 pt-10 pb-24 w-full max-w-5xl mx-auto">
+      <section className="grid md:grid-cols-2 gap-10 md:gap-20 items-center px-5 py-10 w-full max-w-5xl mx-auto">
         {/* Images */}
         <div className="aspect-square relative">
           <div className="aspect-[5/7] w-4/6 absolute bottom-0 left-0 rounded-xl overflow-clip shadow-xl shadow-[--primary-accent] border-r border-[--primary-accent]">
@@ -93,27 +92,28 @@ export default function Home() {
             </Button>
           </Link> */}
         </div>
+
+        {/* Sponsors and logos */}
+        <div className="col-span-2 pt-20 hidden md:flex flex-wrap gap-5 justify-between w-full">
+          {sponsors?.map((x, i) => x.logo)}
+        </div>
       </section>
 
       {/* Book display section */}
       <section>
         {/* Audiobook */}
         <div className="p-5 py-20 w-full max-w-7xl mx-auto grid place-items-center gap-10">
-          <h2 className="text-3xl md:text-5xl font-light text-center text-[--secondary-color]">
+          <h2 className="text-3xl md:text-5xl font-light text-center text-[--secondary-color] hidden">
             Audiobook
           </h2>
 
-          {/* Sponsors and logos */}
-          <div className="hidden md:flex flex-wrap gap-5 justify-between w-full">
-            {sponsors?.map((x, i) => x.logo)}
-          </div>
+          <p className="text-[--secondary-color] text-xl">
+            Listen to the words come to life with our audiobook edition!
+          </p>
 
           {/* Book with play button */}
-          <div
-            style={{ backgroundImage: `url(${book_back})` }}
-            className="aspect-square w-full max-w-xs flex items-center justify-center bg-[--primary-color] bg-cover p-5 rounded-2xl shadow-2xl"
-          >
-            <i class="ri-play-large-fill text-9xl text-white drop-shadow-2xl shadow-[--secondary-color]"></i>
+          <div className="aspect-square w-full max-w-xs flex flex-col items-center justify-center bg-[--secondary-color] bg-[url(/bg.jpg)] bg-cover bg-blend-multiply p-5 rounded-2xl shadow-2xl">
+            <i class="ri-play-circle-line text-9xl text-white drop-shadow-2xl shadow-[--secondary-color]"></i>
           </div>
 
           {/* Audiobook CTA */}
@@ -191,14 +191,14 @@ export default function Home() {
 
           {/* Reviews */}
           <div className="p-5 w-full max-w-5xl mx-auto grid gap-10">
-            <h2 className="text-3xl md:text-5xl font-light text-center hidden">
-              Reviews
+            <h2 className="text-3xl md:text-5xl font-light text-center">
+              What Readers Are Saying
             </h2>
 
             <div className="flex gap-5 items-center justify-center text-2xl">
-              <i class="ri-sparkling-fill"></i>
-              <i class="ri-sparkling-fill"></i>
-              <i class="ri-sparkling-fill"></i>
+              <i class="ri-star-s-line"></i>
+              <i class="ri-star-s-line"></i>
+              <i class="ri-star-s-line"></i>
             </div>
 
             {/* Featured reviews */}
@@ -239,8 +239,8 @@ export default function Home() {
       </section>
 
       {/* About the author */}
-      <section className="grid md:grid-cols-3 gap-10 md:gap-20 px-5 py-24 pt-40 w-full max-w-5xl mx-auto">
-        <h2 className="text-3xl md:text-5xl md:col-span-3 font-light text-[--secondary-color] text-center">
+      <section className="grid md:grid-cols-3 gap-10 md:gap-20 px-5 py-24 w-full max-w-5xl mx-auto">
+        <h2 className="text-3xl md:text-5xl md:col-span-3 font-light text-[--primary-color] text-center">
           About the author
         </h2>
 
@@ -254,7 +254,7 @@ export default function Home() {
 
           <div className="grid gap-10">
             {/* Author image */}
-            <div className="aspect-square relative rounded-2xl shadow-lg shadow-[--secondary-color] overflow-clip">
+            <div className="aspect-square relative rounded-2xl shadow-lg shadow-[--primary-accent] overflow-clip">
               <Image
                 src={author}
                 alt="Trust Onyekwere"
@@ -316,7 +316,7 @@ export default function Home() {
       {/* Get the free copy (Newsletter signup) */}
       <section
         id="quick-preview"
-        className="px-5 py-24 w-full max-w-5xl mx-auto grid gap-10"
+        className="px-5 py-24 w-full max-w-3xl mx-auto grid gap-20"
       >
         {/* CTA */}
         {/* <AnimatedText
@@ -324,25 +324,22 @@ export default function Home() {
           el={`h2`}
           className="text-3xl md:text-5xl text-center md:text-left font-light text-[#786937]"
         /> */}
+        {/* Book spine */}
+        <div className="relative h-[clamp(3rem, 4vw, 4rem)] w-full max-w-lg mx-auto rounded-full overflow-clip shadow-xl bg-[--primary-color]">
+          <Image
+            src={book_spine}
+            alt="Developer Marketing"
+            className="object-contain"
+            placeholder="blur"
+          />
+        </div>
 
         <h2 className="text-3xl md:text-5xl text-center font-light text-[--primary-color]">
           Take a peek
         </h2>
 
-        <div className="flex gap-5 md:gap-10 items-center w-full max-w-3xl mx-auto">
-          {/* Book spine */}
-          <div className="relative w-5 md:w-10 h-full rounded-full overflow-clip shadow-xl bg-[--primary-color]">
-            <Image
-              src={book_spine}
-              alt="Developer Marketing"
-              className="object-contain"
-              placeholder="blur"
-            />
-          </div>
-
-          {/* newsletter form */}
-          <Newsletter />
-        </div>
+        {/* newsletter form */}
+        <Newsletter />
       </section>
     </main>
   );

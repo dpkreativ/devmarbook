@@ -12,7 +12,7 @@ export default function Button({
         secondary
           ? "bg-[--secondary-color] hover:bg-[--secondary-hover]"
           : "bg-[--primary-color] hover:bg-[--primary-hover]"
-      } text-white rounded-xl flex justify-center items-center shadow shadow-[--secondary-color] gap-3 w-full`}
+      } text-white rounded-xl flex justify-center items-center shaow shadow-[--secondary-color] gap-3 w-full`}
     >
       {children}
     </button>

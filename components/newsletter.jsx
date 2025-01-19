@@ -33,7 +33,9 @@ export default function Newsletter() {
           Get more insights on improving your developer marketing game.
         </label>
       </fieldset>
-      <Submit />
+      <div className="w-max mx-auto">
+        <Submit />
+      </div>
     </form>
   );
 }
