@@ -95,7 +95,9 @@ export default function Home() {
 
         {/* Sponsors and logos */}
         <div className="col-span-2 pt-20 hidden md:flex flex-wrap gap-5 justify-between w-full">
-          {sponsors?.map((x, i) => x.logo)}
+          {sponsors?.map((x, i) => (
+            <div key={`${i}-${x.company}`}>{x.logo}</div>
+          ))}
         </div>
       </section>
 
@@ -107,7 +109,7 @@ export default function Home() {
             Audiobook
           </h2>
 
-          <p className="text-[--secondary-color] text-xl">
+          <p className="text-[--secondary-color] text-xl text-center">
             Listen to the words come to life with our audiobook edition!
           </p>
 
@@ -191,15 +193,15 @@ export default function Home() {
 
           {/* Reviews */}
           <div className="p-5 w-full max-w-5xl mx-auto grid gap-10">
-            <h2 className="text-3xl md:text-5xl font-light text-center">
-              What Readers Are Saying
-            </h2>
-
             <div className="flex gap-5 items-center justify-center text-2xl">
               <i class="ri-star-s-line"></i>
               <i class="ri-star-s-line"></i>
               <i class="ri-star-s-line"></i>
             </div>
+
+            <h2 className="text-3xl md:text-5xl font-light text-center">
+              What Readers Are Saying
+            </h2>
 
             {/* Featured reviews */}
             <Carousel>

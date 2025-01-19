@@ -22,7 +22,6 @@ export function BookYouTubeTrailer() {
   );
 }
 
-
 export const sponsors = [
   {
     company: "x",
@@ -190,10 +189,10 @@ export const sponsors = [
             gradientUnits="userSpaceOnUse"
           >
             {" "}
-            <stop class="ccompli1" stop-color="#64C2DB"></stop>{" "}
-            <stop class="ccompli2" offset=".307" stop-color="#7476ED"></stop>{" "}
-            <stop class="ccustom" offset=".604" stop-color="#C994DF"></stop>{" "}
-            <stop class="ccompli1" offset="1" stop-color="#E56F8C"></stop>{" "}
+            <stop class="ccompli1" stopColor="#64C2DB"></stop>{" "}
+            <stop class="ccompli2" offset=".307" stopColor="#7476ED"></stop>{" "}
+            <stop class="ccustom" offset=".604" stopColor="#C994DF"></stop>{" "}
+            <stop class="ccompli1" offset="1" stopColor="#E56F8C"></stop>{" "}
           </linearGradient>{" "}
         </defs>
       </svg>
@@ -279,18 +278,10 @@ export const sponsors = [
             gradientUnits="userSpaceOnUse"
           >
             {" "}
-            <stop class="ccustom" stop-color="#64C2DB"></stop>{" "}
-            <stop
-              offset="0.307292"
-              class="ccompli1"
-              stop-color="#7476ED"
-            ></stop>{" "}
-            <stop
-              offset="0.604167"
-              class="ccompli1"
-              stop-color="#C994DF"
-            ></stop>{" "}
-            <stop offset="1" class="ccompli2" stop-color="#E56F8C"></stop>{" "}
+            <stop class="ccustom" stopColor="#64C2DB"></stop>{" "}
+            <stop offset="0.307292" class="ccompli1" stopColor="#7476ED"></stop>{" "}
+            <stop offset="0.604167" class="ccompli1" stopColor="#C994DF"></stop>{" "}
+            <stop offset="1" class="ccompli2" stopColor="#E56F8C"></stop>{" "}
           </linearGradient>{" "}
         </defs>{" "}
       </svg>

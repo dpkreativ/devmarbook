@@ -44,7 +44,7 @@ function Submit() {
   const { pending } = useFormStatus();
 
   return (
-    <Button secondary type="submit" disabled={pending}>
+    <Button type="submit" disabled={pending}>
       {pending ? (
         <>
           <SpinnerIcon />
