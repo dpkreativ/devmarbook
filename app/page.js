@@ -31,7 +31,7 @@ export default function Home() {
       <section className="grid md:grid-cols-2 gap-10 md:gap-20 items-center px-5 pt-10 pb-24 w-full max-w-5xl mx-auto">
         {/* Images */}
         <div className="aspect-square relative">
-          <div className="aspect-[5/7] w-4/6 absolute bottom-0 left-0 rounded-xl overflow-clip shadow-xl shadow-[--secondary-color] border-r border-[--primary-accent]">
+          <div className="aspect-[5/7] w-4/6 absolute bottom-0 left-0 rounded-xl overflow-clip shadow-xl shadow-[--primary-accent] border-r border-[--primary-accent]">
             <div className="w-full h-full relative">
               <Image
                 src={book_back}
@@ -42,7 +42,7 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className="aspect-[5/7] w-4/6 absolute top-0 right-0 rounded-xl overflow-clip shadow-xl shadow-[--primary-color] border-r-2 border-[--primary-accent]">
+          <div className="aspect-[5/7] w-4/6 absolute top-0 right-0 rounded-xl overflow-clip shadow-xl shadow-[--primary-color] border-r-2 border-[--secondary-color]">
             <div className="w-full h-full relative">
               <Image
                 src={book_front}
@@ -113,7 +113,7 @@ export default function Home() {
             style={{ backgroundImage: `url(${book_back})` }}
             className="aspect-square w-full max-w-xs flex items-center justify-center bg-[--primary-color] bg-cover p-5 rounded-2xl shadow-2xl"
           >
-            <i class="ri-play-large-line text-9xl text-white"></i>
+            <i class="ri-play-large-fill text-9xl text-white drop-shadow-2xl shadow-[--secondary-color]"></i>
           </div>
 
           {/* Audiobook CTA */}
