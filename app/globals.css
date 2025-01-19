@@ -13,6 +13,8 @@ html {
   --background-color: #ffffff;
   --grey-accent: #f0f4f8;
   --primary-accent: #a8beda;
+  --primary-hover: #16457a;
+  --secondary-hover: #76783a;
 }
 
 .backface-visible {

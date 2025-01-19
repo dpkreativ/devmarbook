@@ -12,6 +12,9 @@ import {
   ebook_link,
   book_spine,
   reviews,
+  sponsors,
+  audio_link,
+  Logo,
 } from "@/assets";
 // import AnimatedText from "@/components/animated-text";
 import Button from "@/components/button";
@@ -76,7 +79,7 @@ export default function Home() {
                 <div>Get E-book</div>
               </Button>
             </a>
-            <a href={`/`} target="_blank" rel="noopener noreferrer">
+            <a href={audio_link} target="_blank" rel="noopener noreferrer">
               <Button>
                 <AudibleIcon />
                 <div>Listen to Audio</div>
@@ -93,31 +96,46 @@ export default function Home() {
       </section>
 
       {/* Book display section */}
-      <section className="bg-[--primary-color] text-white">
+      <section>
+        {/* Audiobook */}
         <div className="p-5 py-20 w-full max-w-7xl mx-auto grid place-items-center gap-10">
-          <div className="w-full max-w-5xl mx-auto grid gap-10">
-            <h2 className="text-xl md:text-3xl font-light text-center">
-              Reviews
-            </h2>
+          <h2 className="text-3xl md:text-5xl font-light text-center text-[--secondary-color]">
+            Audiobook
+          </h2>
 
-            {/* Featured reviews */}
-            <Carousel>
-              {reviews?.map((review, idx) => (
-                <div
-                  key={idx}
-                  className="flex-[0_0_100%] pl-4 relative min-w-0"
-                >
-                  <ReviewCard
-                    content={review.content}
-                    fullName={review.fullName}
-                    role={review.role}
-                  />
-                </div>
-              ))}
-            </Carousel>
+          {/* Sponsors and logos */}
+          <div className="flex flex-wrap gap-5 justify-between w-full">
+            {sponsors?.map((x, i) => x.logo)}
+          </div>
+
+          {/* Book with play button */}
+          <div
+            style={{ backgroundImage: `url(${book_back})` }}
+            className="aspect-square w-full max-w-xs flex items-center justify-center bg-[--primary-color] bg-cover p-5 rounded-2xl shadow-2xl"
+          >
+            <i class="ri-play-large-line text-9xl text-white"></i>
+          </div>
+
+          {/* Audiobook CTA */}
+          <div className="grid md:grid-cols-2 gap-5">
+            <a href={`/`} target="_blank" rel="noopener noreferrer">
+              <Button secondary>
+                <i class="ri-play-circle-line"></i>
+                <div>Play sample</div>
+              </Button>
+            </a>
+            <a href={audio_link} target="_blank" rel="noopener noreferrer">
+              <Button>
+                <AudibleIcon />
+                <div>Get audiobook</div>
+              </Button>
+            </a>
           </div>
         </div>
+      </section>
 
+      {/* What's inside? */}
+      <section className="bg-[--primary-color] text-white">
         <div
           className="px-5 w-full max-w-5xl mx-auto grid gap-10"
           id="whats-inside"
@@ -205,6 +223,26 @@ export default function Home() {
             </a>
           </div>
         </div>
+
+        {/* Reviews */}
+        <div className="w-full max-w-5xl mx-auto grid gap-10">
+          <h2 className="text-xl md:text-3xl font-light text-center">
+            Reviews
+          </h2>
+
+          {/* Featured reviews */}
+          <Carousel>
+            {reviews?.map((review, idx) => (
+              <div key={idx} className="flex-[0_0_100%] pl-4 relative min-w-0">
+                <ReviewCard
+                  content={review.content}
+                  fullName={review.fullName}
+                  role={review.role}
+                />
+              </div>
+            ))}
+          </Carousel>
+        </div>
       </section>
 
       {/* About the author */}
@@ -223,7 +261,7 @@ export default function Home() {
 
           <div className="grid gap-10">
             {/* Author image */}
-            <div className="aspect-square relative rounded-2xl overflow-clip">
+            <div className="aspect-square relative rounded-2xl shadow-lg shadow-[--secondary-color] overflow-clip">
               <Image
                 src={author}
                 alt="Trust Onyekwere"

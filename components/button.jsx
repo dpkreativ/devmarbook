@@ -10,9 +10,9 @@ export default function Button({
       disabled={disabled}
       className={`py-3 px-5 ${
         secondary
-          ? "bg-[--secondary-color] hover:bg-[--primary-color]"
-          : "bg-[--primary-color] hover:bg-[--secondary-color]"
-      } text-white rounded-xl flex justify-center items-center gap-3 w-full`}
+          ? "bg-[--secondary-color] hover:bg-[--secondary-hover]"
+          : "bg-[--primary-color] hover:bg-[--primary-hover]"
+      } text-white rounded-xl flex justify-center items-center shadow shadow-[--secondary-color] gap-3 w-full`}
     >
       {children}
     </button>
