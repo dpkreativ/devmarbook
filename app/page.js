@@ -104,7 +104,7 @@ export default function Home() {
           </h2>
 
           {/* Sponsors and logos */}
-          <div className="flex flex-wrap gap-5 justify-between w-full">
+          <div className="hidden md:flex flex-wrap gap-5 justify-between w-full">
             {sponsors?.map((x, i) => x.logo)}
           </div>
 
@@ -134,8 +134,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* What's inside? */}
-      <section className="bg-[--primary-color] text-white">
+      <section className="bg-[--primary-color] text-white py-24 grid gap-24">
+        {/* What's inside? */}
         <div
           className="px-5 w-full max-w-5xl mx-auto grid gap-10"
           id="whats-inside"
@@ -160,7 +160,7 @@ export default function Home() {
           <div className="w-full max-w-2xl mx-auto grid gap-10 py-5 text-center">
             {/* Feature text */}
             <div className="grid gap-2">
-              <h3 className="text-xl lg:text-3xl font-bold">
+              <h3 className="text-2xl font-light">
                 Developer Marketing Strategies
               </h3>
               <p>
@@ -171,9 +171,7 @@ export default function Home() {
 
             {/* Feature text */}
             <div className="grid gap-2">
-              <h3 className="text-xl lg:text-3xl font-bold">
-                Community Building
-              </h3>
+              <h3 className="text-2xl font-light">Community Building</h3>
               <p>
                 Leveraging the power of community to interact with developers.
               </p>
@@ -181,7 +179,7 @@ export default function Home() {
 
             {/* Feature text */}
             <div className="grid gap-2">
-              <h3 className="text-xl lg:text-3xl font-bold">
+              <h3 className="text-2xl font-light">
                 Partnerships and Influencer Marketing
               </h3>
               <p>
@@ -191,57 +189,52 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid gap-5 md:grid-cols-2 w-max mx-auto -mb-5">
-            {/* Get on Amazon */}
-            <a
-              href={ebook_link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border-2 border-white rounded-full w-max mx-auto overflow-clip shadow-xl"
-            >
-              <Button>
-                <div className="animate-pulse">
-                  <AmazonIcon />
+          {/* Reviews */}
+          <div className="p-5 w-full max-w-5xl mx-auto grid gap-10">
+            <h2 className="text-3xl md:text-5xl font-light text-center hidden">
+              Reviews
+            </h2>
+
+            <div className="flex gap-5 items-center justify-center text-2xl">
+              <i class="ri-sparkling-fill"></i>
+              <i class="ri-sparkling-fill"></i>
+              <i class="ri-sparkling-fill"></i>
+            </div>
+
+            {/* Featured reviews */}
+            <Carousel>
+              {reviews?.map((review, idx) => (
+                <div
+                  key={idx}
+                  className="flex-[0_0_100%] pl-4 relative min-w-0"
+                >
+                  <ReviewCard
+                    content={review.content}
+                    fullName={review.fullName}
+                    role={review.role}
+                  />
                 </div>
+              ))}
+            </Carousel>
+          </div>
+
+          <div className="grid gap-5 md:grid-cols-2 w-max mx-auto">
+            {/* Get on Amazon */}
+            <a href={ebook_link} target="_blank" rel="noopener noreferrer">
+              <Button secondary>
+                <AmazonIcon />
                 <div>Get it on Amazon</div>
               </Button>
             </a>
 
             {/* Get on Audible */}
-            <a
-              href={`/`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border-2 border-white rounded-full w-max mx-auto overflow-clip shadow-xl"
-            >
+            <a href={`/`} target="_blank" rel="noopener noreferrer">
               <Button secondary>
-                <div className="animate-pulse">
-                  <AudibleIcon />
-                </div>
+                <AudibleIcon />
                 <div>Listen on Audible</div>
               </Button>
             </a>
           </div>
-        </div>
-
-        {/* Reviews */}
-        <div className="w-full max-w-5xl mx-auto grid gap-10">
-          <h2 className="text-xl md:text-3xl font-light text-center">
-            Reviews
-          </h2>
-
-          {/* Featured reviews */}
-          <Carousel>
-            {reviews?.map((review, idx) => (
-              <div key={idx} className="flex-[0_0_100%] pl-4 relative min-w-0">
-                <ReviewCard
-                  content={review.content}
-                  fullName={review.fullName}
-                  role={review.role}
-                />
-              </div>
-            ))}
-          </Carousel>
         </div>
       </section>
 
