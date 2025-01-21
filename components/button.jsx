@@ -1,11 +1,13 @@
 export default function Button({
   children,
   disabled = false,
+  onClick,
   secondary,
   type = "button",
 }) {
   return (
     <button
+      onClick={onClick}
       type={type}
       disabled={disabled}
       className={`py-3 px-5 ${

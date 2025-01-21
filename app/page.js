@@ -16,6 +16,7 @@ import {
   audio_link,
   Logo,
 } from "@/assets";
+import AudioPlayer from "@/components/audio-player";
 // import AnimatedText from "@/components/animated-text";
 import Button from "@/components/button";
 import { ReviewCard } from "@/components/card";
@@ -120,12 +121,7 @@ export default function Home() {
 
           {/* Audiobook CTA */}
           <div className="grid md:grid-cols-2 gap-5">
-            <a href={`/`} target="_blank" rel="noopener noreferrer">
-              <Button secondary>
-                <i class="ri-play-circle-line"></i>
-                <div>Play sample</div>
-              </Button>
-            </a>
+            <AudioPlayer />
             <a href={audio_link} target="_blank" rel="noopener noreferrer">
               <Button>
                 <AudibleIcon />
@@ -336,12 +332,12 @@ export default function Home() {
           />
         </div>
 
-        <h2 className="text-3xl md:text-5xl text-center font-light text-[--primary-color]">
+        {/* <h2 className="text-3xl md:text-5xl text-center font-light text-[--primary-color]">
           Take a peek
-        </h2>
+        </h2> */}
 
         {/* newsletter form */}
-        <Newsletter />
+        {/* <Newsletter /> */}
       </section>
     </main>
   );
