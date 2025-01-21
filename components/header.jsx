@@ -9,7 +9,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-10 px-3 pt-5 bg-transparent">
-      <div className="bg-[--background-color] border border-[--grey-accent] hover:border-[--primary-accent] text-[--primary-color] rounded-2xl p-5 max-w-7xl mx-auto flex flex-col md:flex-row md:justify-between gap-4">
+      <div className="bg-[--background-color] border border-[--grey-accent] hover:border-[--primary-accent] text-[--primary-color] rounded-2xl p-5 max-w-7xl mx-auto flex flex-col lg:flex-row lg:justify-between gap-4">
         {/* Top Bar: Blog Link and Hamburger Menu */}
         <div className="flex justify-between items-center">
           <a
@@ -24,7 +24,7 @@ export default function Header() {
 
           {/* Hamburger Menu Button */}
           <button
-            className="md:hidden"
+            className="lg:hidden"
             onClick={() => setIsOpen(!isOpen)}
             aria-label={isOpen ? "Close menu" : "Open menu"}
           >
@@ -40,25 +40,25 @@ export default function Header() {
         <nav
           className={`${
             isOpen ? "grid" : "hidden"
-          } md:flex items-center gap-4 md:gap-10`}
+          } lg:flex items-center gap-4 lg:gap-10`}
         >
           <Link
             href="#whats-inside"
-            className="flex gap-2 items-center py-2 md:py-0 hover:text-[--secondary-color]"
+            className="flex gap-2 items-center py-2 lg:py-0 hover:text-[--secondary-color]"
           >
             <i class="ri-book-open-line text-2xl"></i>
             <span>What's inside?</span>
           </Link>
           <Link
             href="#quick-preview"
-            className="flex gap-2 items-center py-2 md:py-0 hover:text-[--secondary-color]"
+            className="flex gap-2 items-center py-2 lg:py-0 hover:text-[--secondary-color]"
           >
             <i class="ri-eye-2-line text-2xl"></i>
             <span>Quick preview</span>
           </Link>
           <a
             href={ebook_link}
-            className="flex gap-2 items-center py-2 md:py-0 hover:text-[--secondary-color]"
+            className="flex gap-2 items-center py-2 lg:py-0 hover:text-[--secondary-color]"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -67,7 +67,7 @@ export default function Header() {
           </a>
           <a
             href={audio_link}
-            className="flex gap-2 items-center py-2 md:py-0 hover:text-[--secondary-color]"
+            className="flex gap-2 items-center py-2 lg:py-0 hover:text-[--secondary-color]"
             target="_blank"
             rel="noopener noreferrer"
           >
