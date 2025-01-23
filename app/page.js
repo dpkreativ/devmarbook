@@ -96,10 +96,21 @@ export default function Home() {
         </div>
 
         {/* Sponsors and logos */}
-        <div className="col-span-2 pt-20 hidden md:flex flex-wrap gap-5 justify-between w-full">
-          {sponsors?.map((x, i) => (
-            <div key={`${i}-${x.company}`}>{x.logo}</div>
-          ))}
+        <div className="md:col-span-2 pt-20">
+          <Carousel>
+            {sponsors?.map((x, i) => (
+              <div
+                key={`${i}-${x.company}`}
+                className="relative pr-10 h-14 flex-[0_0_auto] min-w-0 max-w-full"
+              >
+                <Image
+                  src={x.url}
+                  alt={x.company}
+                  className="object-contain h-full w-max"
+                />
+              </div>
+            ))}
+          </Carousel>
         </div>
       </section>
 
