@@ -75,7 +75,7 @@ export default function Home() {
           <h3 className="drop-shadow-sm">
             A comprehensive approach to reaching and engaging developers
           </h3>
-          <div className="grid md:grid-cols-2 gap-5">
+          <div className="grid lg:grid-cols-2 gap-5">
             <a href={ebook_link} target="_blank" rel="noopener noreferrer">
               <Button>
                 <AmazonIcon />
