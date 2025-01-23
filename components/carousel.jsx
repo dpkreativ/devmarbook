@@ -9,7 +9,7 @@ export default function Carousel({ children }) {
   return (
     <div className="overflow-hidden" ref={ref}>
       {/* Carousel content */}
-      <div className="flex items-center gap-5 backface-visible touch-pan-y ml-[calc(1rem*-1)] cursor-grab active:cursor-grabbing p-4">
+      <div className="flex items-center gap-5 md:gap-10 backface-visible touch-pan-y ml-[calc(1rem*-1)] cursor-grab active:cursor-grabbing p-4">
         {children}
       </div>
     </div>
