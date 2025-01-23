@@ -4,7 +4,7 @@ import book_spine from "./book-spine-min.jpg";
 import author from "./author.jpg";
 import book_dd from "./dd.png";
 import AppleBooks from "./Apple_Books_Icon.svg";
-import Audible from "./Audible_BylineLogo_US_AU_CA_IN_JP_UK_IronandSolar_RGB.png";
+import Audible from "./Audible_Logo_IronandSolar_RGB.png";
 import BarnesNoble from "./Barnes_and_Noble.png";
 import Everand from "./everand_logo_wordmark.svg";
 import Kobo from "./Kobo_Inc.-Logo.wine.png";
@@ -27,7 +27,7 @@ export function BookYouTubeTrailer() {
   );
 }
 
-export const sponsors = [
+export const partners = [
   {
     company: "Apple Books",
     url: AppleBooks,
@@ -53,7 +53,7 @@ export const sponsors = [
 
 // --- Book links ---
 export const ebook_link = "https://a.co/d/hU4ZCYq";
-export const audio_link = "https://a.co/d/hU4ZCYq";
+export const audio_link = "https://linktr.ee/devmar_audio";
 
 // --- Reviews ---
 export const reviews = [

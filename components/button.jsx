@@ -3,6 +3,7 @@ export default function Button({
   disabled = false,
   onClick,
   secondary,
+  tertiary,
   type = "button",
 }) {
   return (
@@ -12,9 +13,11 @@ export default function Button({
       disabled={disabled}
       className={`py-3 px-5 ${
         secondary
-          ? "bg-[--secondary-color] hover:bg-[--secondary-hover]"
-          : "bg-[--primary-color] hover:bg-[--primary-hover]"
-      } text-white rounded-xl flex justify-center items-center shaow shadow-[--secondary-color] gap-3 w-full`}
+          ? "bg-[--secondary-color] hover:bg-[--secondary-hover] text-white"
+          : tertiary
+          ? "bg-[--tertiary-color] hover:bg-[--secondary-hover] text-[--dark-tone]"
+          : "bg-[--primary-color] hover:bg-[--primary-hover] text-white"
+      } rounded-xl flex justify-center items-center gap-3 w-full`}
     >
       {children}
     </button>

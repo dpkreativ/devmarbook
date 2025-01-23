@@ -1,7 +1,6 @@
 import {
   AmazonIcon,
   AudibleIcon,
-  BookIcon,
   BookYouTubeTrailer,
   LinkedInIcon,
   MediumIcon,
@@ -10,20 +9,14 @@ import {
   book_back,
   book_front,
   ebook_link,
-  book_spine,
   reviews,
-  sponsors,
-  audio_link,
-  Logo,
   BulletIcon,
+  partners,
 } from "@/assets";
-import AudioPlayer from "@/components/audio-player";
 import AudiobookPreview from "@/components/audiobook-preview";
-// import AnimatedText from "@/components/animated-text";
 import Button from "@/components/button";
 import { ReviewCard } from "@/components/card";
 import Carousel from "@/components/carousel";
-import Newsletter from "@/components/newsletter";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -97,22 +90,20 @@ export default function Home() {
           </Link> */}
         </div>
 
-        {/* Sponsors and logos */}
-        <div className="md:col-span-2 pt-20">
-          <Carousel>
-            {sponsors?.map((x, i) => (
-              <div
-                key={`${i}-${x.company}`}
-                className="relative pr-10 h-14 flex-[0_0_auto] min-w-0 max-w-full"
-              >
-                <Image
-                  src={x.url}
-                  alt={x.company}
-                  className="object-contain h-full w-max"
-                />
-              </div>
-            ))}
-          </Carousel>
+        {/* Partner brands */}
+        <div className="md:col-span-2 pt-20 flex flex-wrap justify-center gap-10">
+          {partners?.map((x, i) => (
+            <div
+              key={`${i}-${x.company}`}
+              className="relative h-8 flex-[0_0_auto] min-w-0 max-w-full"
+            >
+              <Image
+                src={x.url}
+                alt={x.company}
+                className="object-contain h-full w-max"
+              />
+            </div>
+          ))}
         </div>
       </section>
 
@@ -225,7 +216,7 @@ export default function Home() {
           <div className="grid gap-5 md:grid-cols-2 w-max mx-auto">
             {/* Get on Amazon */}
             <a href={ebook_link} target="_blank" rel="noopener noreferrer">
-              <Button secondary>
+              <Button tertiary>
                 <AmazonIcon />
                 <div>Get E-book</div>
               </Button>
@@ -233,7 +224,7 @@ export default function Home() {
 
             {/* Get on Audible */}
             <Link href={`#quick-preview`}>
-              <Button secondary>
+              <Button tertiary>
                 <AudibleIcon />
                 <div>Listen to Audio</div>
               </Button>
@@ -329,14 +320,14 @@ export default function Home() {
           className="text-3xl md:text-5xl text-center md:text-left font-light text-[#786937]"
         /> */}
         {/* Book spine */}
-        <div className="relative h-[clamp(3rem, 4vw, 4rem)] w-full max-w-lg mx-auto rounded-full overflow-clip shadow-xl bg-[--primary-color]">
+        {/* <div className="relative h-[clamp(3rem, 4vw, 4rem)] w-full max-w-lg mx-auto rounded-full overflow-clip shadow-xl bg-[--primary-color]">
           <Image
             src={book_spine}
             alt="Developer Marketing"
             className="object-contain"
             placeholder="blur"
           />
-        </div>
+        </div> */}
 
         {/* <h2 className="text-3xl md:text-5xl text-center font-light text-[--primary-color]">
           Take a peek
