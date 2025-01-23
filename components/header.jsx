@@ -12,15 +12,13 @@ export default function Header() {
       <div className="bg-[--background-color] border border-[--grey-accent] hover:border-[--primary-accent] text-[--primary-color] rounded-2xl p-5 max-w-7xl mx-auto flex flex-col lg:flex-row lg:justify-between gap-4">
         {/* Top Bar: Blog Link and Hamburger Menu */}
         <div className="flex justify-between items-center">
-          <a
-            href="https://blog.devmarbook.com"
+          <Link
+            href="/"
             className="flex gap-2 items-center hover:text-[--secondary-color]"
-            target="_blank"
-            rel="noopener noreferrer"
           >
             <i className="ri-file-list-3-line text-2xl"></i>
             <span>Blog</span>
-          </a>
+          </Link>
 
           {/* Hamburger Menu Button */}
           <button
@@ -65,15 +63,13 @@ export default function Header() {
             <AmazonIcon />
             <span>Get E-book</span>
           </a>
-          <a
-            href={audio_link}
+          <Link
+            href={`#quick-preview`}
             className="flex gap-2 items-center py-2 lg:py-0 hover:text-[--secondary-color]"
-            target="_blank"
-            rel="noopener noreferrer"
           >
             <AudibleIcon />
             <span>Listen to Audio</span>
-          </a>
+          </Link>
         </nav>
       </div>
     </header>

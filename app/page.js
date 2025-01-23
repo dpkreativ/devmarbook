@@ -18,12 +18,14 @@ import {
   BulletIcon,
 } from "@/assets";
 import AudioPlayer from "@/components/audio-player";
+import AudiobookPreview from "@/components/audiobook-preview";
 // import AnimatedText from "@/components/animated-text";
 import Button from "@/components/button";
 import { ReviewCard } from "@/components/card";
 import Carousel from "@/components/carousel";
 import Newsletter from "@/components/newsletter";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -80,12 +82,12 @@ export default function Home() {
                 <div>Get E-book</div>
               </Button>
             </a>
-            <a href={audio_link} target="_blank" rel="noopener noreferrer">
+            <Link href={`#quick-preview`}>
               <Button>
                 <AudibleIcon />
                 <div>Listen to Audio</div>
               </Button>
-            </a>
+            </Link>
           </div>
           {/* <Link href="#quick-preview">
             <Button secondary>
@@ -115,41 +117,27 @@ export default function Home() {
       </section>
 
       {/* Book display section */}
-      <section>
+      <section id="quick-preview" className="py-24">
         {/* Audiobook */}
-        <div className="p-5 py-20 w-full max-w-7xl mx-auto grid place-items-center gap-10">
-          <h2 className="text-3xl md:text-5xl font-light text-center text-[--secondary-color] hidden">
+        <div className="p-5 w-full max-w-7xl mx-auto grid place-items-center gap-10">
+          <h2 className="text-3xl md:text-5xl font-light text-center text-[--secondary-color]">
             Audiobook
           </h2>
 
-          <p className="text-[--secondary-color] text-xl text-center">
-            Listen to the words come to life with our audiobook edition!
+          <p className="text-[--secondary-color] text-xl md:text-3xl text-center">
+            Now you can listen on the go!
           </p>
 
-          {/* Book with play button */}
-          <div className="aspect-square w-full max-w-xs flex flex-col items-center justify-center bg-[--secondary-color] bg-[url(/bg.jpg)] bg-cover bg-blend-multiply p-5 rounded-2xl shadow-2xl">
-            <i class="ri-play-circle-line text-9xl text-white drop-shadow-2xl shadow-[--secondary-color]"></i>
-          </div>
-
-          {/* Audiobook CTA */}
-          <div className="grid md:grid-cols-2 gap-5">
-            <AudioPlayer />
-            <a href={audio_link} target="_blank" rel="noopener noreferrer">
-              <Button>
-                <AudibleIcon />
-                <div>Get audiobook</div>
-              </Button>
-            </a>
-          </div>
+          <AudiobookPreview />
         </div>
       </section>
 
-      <section className="bg-[--primary-color] text-white py-24 grid gap-24">
+      <section
+        id="whats-inside"
+        className="bg-[--primary-color] text-white py-24 grid gap-24"
+      >
         {/* What's inside? */}
-        <div
-          className="px-5 w-full max-w-5xl mx-auto grid gap-10"
-          id="whats-inside"
-        >
+        <div className="px-5 w-full max-w-5xl mx-auto grid gap-10">
           {/* Section header */}
           {/* <AnimatedText
             text={`What's inside?`}
@@ -239,17 +227,17 @@ export default function Home() {
             <a href={ebook_link} target="_blank" rel="noopener noreferrer">
               <Button secondary>
                 <AmazonIcon />
-                <div>Get it on Amazon</div>
+                <div>Get E-book</div>
               </Button>
             </a>
 
             {/* Get on Audible */}
-            <a href={`/`} target="_blank" rel="noopener noreferrer">
+            <Link href={`#quick-preview`}>
               <Button secondary>
                 <AudibleIcon />
-                <div>Listen on Audible</div>
+                <div>Listen to Audio</div>
               </Button>
-            </a>
+            </Link>
           </div>
         </div>
       </section>

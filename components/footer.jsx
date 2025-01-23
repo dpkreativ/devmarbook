@@ -32,15 +32,13 @@ export default function Footer() {
             <AmazonIcon />
             <span>Get E-book</span>
           </a>
-          <a
-            href={audio_link}
+          <Link
+            href={`#quick-preview`}
             className="flex gap-2 items-center py-2 md:py-0 hover:text-[--secondary-color]"
-            target="_blank"
-            rel="noopener noreferrer"
           >
             <AudibleIcon />
             <span>Listen to Audio</span>
-          </a>
+          </Link>
         </nav>
 
         <div className="flex gap-10 items-center justify-center">
