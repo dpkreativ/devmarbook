@@ -36,7 +36,7 @@ export default function AudiobookPreview() {
 
       {/* Audiobook CTA */}
       <div className="grid md:grid-cols-2 gap-5">
-        <Button secondary onClick={togglePlay}>
+        <Button tertiary onClick={togglePlay}>
           <i className={`ri-${isPlaying ? "pause" : "play"}-circle-line`}></i>
           <span className="ml-2">{isPlaying ? "Pause" : "Play"} preview</span>
           <audio ref={audioRef} src="/audio.mp3"></audio>

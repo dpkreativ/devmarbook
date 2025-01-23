@@ -30,7 +30,7 @@ export default function Footer() {
             rel="noopener noreferrer"
           >
             <AmazonIcon />
-            <span>Get E-book</span>
+            <span>Get Paperback</span>
           </a>
           <Link
             href={`#quick-preview`}

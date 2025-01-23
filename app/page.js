@@ -72,7 +72,7 @@ export default function Home() {
             <a href={ebook_link} target="_blank" rel="noopener noreferrer">
               <Button>
                 <AmazonIcon />
-                <div>Get E-book</div>
+                <div>Get Paperback</div>
               </Button>
             </a>
             <Link href={`#quick-preview`}>
@@ -218,7 +218,7 @@ export default function Home() {
             <a href={ebook_link} target="_blank" rel="noopener noreferrer">
               <Button tertiary>
                 <AmazonIcon />
-                <div>Get E-book</div>
+                <div>Get Paperback</div>
               </Button>
             </a>
 

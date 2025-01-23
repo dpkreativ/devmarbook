@@ -61,7 +61,7 @@ export default function Header() {
             rel="noopener noreferrer"
           >
             <AmazonIcon />
-            <span>Get E-book</span>
+            <span>Get Paperback</span>
           </a>
           <Link
             href={`#quick-preview`}
