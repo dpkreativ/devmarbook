@@ -309,10 +309,7 @@ export default function Home() {
       </section>
 
       {/* Get the free copy (Newsletter signup) */}
-      <section
-        id="quick-preview"
-        className="px-5 py-24 w-full max-w-3xl mx-auto grid gap-20"
-      >
+      <section id="" className="w-full max-w-3xl mx-auto grid gap-20">
         {/* CTA */}
         {/* <AnimatedText
           text={`Quick preview`}
